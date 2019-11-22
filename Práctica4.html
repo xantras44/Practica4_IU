@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+    <html> 
+        
+        <head>
+            <link rel="stylesheet" href="CSS/estiloCSS.css"/>
+            <title>ALL eSPORT</title>
+            <style type="CSS/estiloCSS.css"></style>
+            <script src="JS/jquery-3.4.1.js"></script>
+            <script src="JS/jquery-ui.js"></script>
+            <script src="JS/script.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head> 
+
+        <body id="Body"> 
+            <header>
+                <div id = "cajaCabecera">
+                    <div><img id="menuPrincipal" src="IMG/menu.png"></div>
+                    <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
+                    <div id="cajaTitulo"><strong>ALL eSPORT</strong></div>
+                    <button class="cajaIniciarSesionRegistrarse" id="IniciarSesion" onclick="iniciarSesion()">Iniciar Sesion</button>
+                    <button class="cajaIniciarSesionRegistrarse" id="Registrarse" onclick="registrarse()">Registrarse</button>
+                </div>
+            </header>
+            <div id="cajaFormularioRegistro">
+                <form name="formularioRegistrarse"  onsubmit="comprobarCookie()">
+                    <legend class="legend">Registro</legend>
+                    <br>
+                    Nombre de Usuario:<br>
+                    <input class="campoRegistrarse" type="text" id="nombreFormulario" name="nombreUsuario" placeholder="Ej.: IVG55" required>
+                    <br><br>
+                    Email:<br>
+                    <input class="campoRegistrarse" type="email" name="email" placeholder="Ej.: ivanvg6@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <br><br>
+                    Contraseña:<br>
+                    <input class="campoRegistrarse" type="password" name="contraseña" placeholder="Ej.: jsnf75j4" required maxlength="8" pattern="[a-z0-9]+">
+                    <br><br>
+                    <input type="radio" name="leerAceptarCondicionesUso" value="CondicionesUso" required> He leído y acepto las condiciones de uso.<br>
+                    <br>
+                    <input id="botonRegistrarse" type="submit" value="Registrarse">
+                    <br>
+                    <div id="preguntaIniciarSesion">¿Ya tienes una cuenta?</div>
+                    <div id="opcionIniciarSesion" onclick="iniciarSesion()"><u>Inicia sesion ahora</u></div>
+                </form>
+            </div>
+            <div id="cajaFormularioIniciarSesion">
+                <form name="formularioIniciarSesion">
+                    <legend class="legend">¡Bienvenido!</legend>
+                    <br><br>
+                    Email:<br>
+                    <input class="campoIniciarSesion" type="email" name="email" placeholder="Ej.: ivanvg6@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <br><br>
+                    Contraseña:<br>
+                    <input class="campoIniciarSesion" type="password" name="contraseña" placeholder="Ej.: jsnf75j4" required maxlength="8" pattern="[a-z0-9]+">
+                    <br><br>
+                    <div id="botonIniciarSesion" onclick="buscarCookie()">Iniciar Sesion</div>
+                    <div id="preguntaRegistrarse">¿No tienes una cuenta?</div>
+                    <div id="opcionRegistrarse" onclick="registrarse()"><u>Registrate ahora</u></div>
+                </form>
+            </div>
+            <div id="contenidoUserNoRegistrado">
+                <div id="fraseDescriptiva">Organiza los mejores eventos de deportes electronicos con ALL eSPORT</div>
+                <div id="descripcionPagina">¿En que consiste la pagina?
+                    <p class="textoDescripcion">ALL eSPORT te permite organizar todos los eventos de deportes electrónicos de tu interes.</p>
+                    <p class="textoDescripcion">Estaras actualizado con las ultimas novedades de los eSports.</p>
+                    <p class="textoDescripcion">Podras ver eventos de otras personas, asi como compartir los tuyos propios.</p>
+                </div>
+                <div id="videoExplicacion">
+                    <video width="600" controls>
+                        <source src="IMG/videoExplicacion.mp4" type="video/mp4">
+                        <source src="IMG/videoExplicacion.ogg" type="video/ogg">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div>
+            </div>
+            <footer>
+                <div id = "cajaFooter">
+                    <div class="columnasFooter">Columna1</div>
+                    <div class="columnasFooter">Columna2</div>
+                    <div class="columnasFooter">Columna3</div>
+                </div>
+            </footer>
+        </body> 
+    </html>

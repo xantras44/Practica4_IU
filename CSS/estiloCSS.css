@@ -1,0 +1,265 @@
+#Body {
+    background-image: url("https://esports.eldesmarque.com/wp-content/uploads/2019/07/PykeProyecto.jpg");
+    margin: 0px 0px 0px 0px;
+    background-attachment: fixed;
+}
+
+#Body image {
+    width: 80%;
+    height: 80%;
+}
+
+#cajaCabecera {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(48, 48, 48);
+    border-bottom: 2px solid aqua;
+}
+
+#cajaTitulo {
+    width: 11%;
+    height: auto;
+    margin-top: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: white;
+    font-size: 150%;
+    float: left;
+}
+
+#menuPrincipal {
+    width: 4%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+    float: left;
+}
+
+#imgTitulo {
+    width: 4%;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 36.5%;
+    margin-right: 0.5%;
+    border-radius: 100%;
+    float: left;
+}
+
+.cajaIniciarSesionRegistrarse {
+    width: 10%;
+    height: auto;
+    margin-top: 2%;
+    margin-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    float: right;
+}
+
+/*No funciona*/
+.cajaIniciarSesionRegistrarse :hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#cajaFormularioRegistro {
+    height: auto;
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 22%;
+    margin-bottom: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 18px;
+    visibility: hidden;
+    position: absolute;
+}
+
+#cajaFormularioRegistro .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    cursor: default;
+}
+
+.campoRegistrarse {
+    width: 100%;
+    height: 35px;;
+}
+
+#botonRegistrarse {
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: green;
+    border-style: none;
+    cursor: pointer;
+}
+
+#preguntaIniciarSesion {
+    width: 22%;
+    margin-left: 30%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+}
+
+#opcionIniciarSesion {
+    width: 17%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+}
+
+#cajaFormularioIniciarSesion {
+    height: auto;
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 22%;
+    margin-bottom: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    font-size: 20px;
+    visibility: hidden;
+    position: absolute;
+}
+
+#cajaFormularioIniciarSesion .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    cursor: default;
+}
+
+.legend {
+    text-align: center;
+    font-size: 40px;
+}
+
+.campoIniciarSesion {
+    width: 100%;    
+    height: 40px;
+}
+
+#botonIniciarSesion {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 24px;
+    background-color: green;
+    cursor: pointer;
+}
+
+#preguntaRegistrarse {
+    width: 22%;
+    margin-left: 31%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+}
+
+#opcionRegistrarse {
+    width: 15%;
+    margin-top: 3%;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+#contenidoUserNoRegistrado {
+    width: 100%;
+    height: 510px;
+}
+
+#fraseDescriptiva {
+    width: 35%;
+    height: auto;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+#descripcionPagina {
+    width: 35%;
+    height: auto;
+    margin-top: 6%;
+    margin-left: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    float: left;
+}
+
+.textoDescripcion {
+    text-align: left;
+    font-size: 20px;
+}
+
+#videoExplicacion {
+    margin-top: 4%;
+    margin-right: 4%;
+    float: right;
+}
+
+#cajaFooter {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    border-top: aqua;
+}
+
+.columnasFooter {
+    width: 33.33%;
+    height: 100%;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    float: left;
+}
