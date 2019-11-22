@@ -46,6 +46,7 @@ function buscarCookie() {
                 document.getElementById("userName").textContent= usuario;
                 var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
                 cajaFormularioIniciarSesion.style.visibility="hidden";
+                location.href ="PáginaSesión.html";
                 /*var columna = document.getElementById("cajaIzquierda");
                 columna.style.visibility= "visible";
                 var columna = document.getElementById("cajaCentral");

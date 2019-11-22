@@ -4,11 +4,6 @@
     background-attachment: fixed;
 }
 
-#Body image {
-    width: 80%;
-    height: 80%;
-}
-
 #cajaCabecera {
     width: 100%;
     height: 100px;
@@ -27,19 +22,11 @@
     float: left;
 }
 
-#menuPrincipal {
-    width: 4%;
-    height: auto;
-    margin-top: 2%;
-    margin-left: 2%;
-    float: left;
-}
-
 #imgTitulo {
     width: 4%;
     height: auto;
     margin-top: 2%;
-    margin-left: 36.5%;
+    margin-left: 41%;
     margin-right: 0.5%;
     border-radius: 100%;
     float: left;
@@ -162,13 +149,15 @@
 
 #botonIniciarSesion {
     width: 40%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 30%;
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: center;
     font-size: 24px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
     background-color: green;
+    border-style: none;
     cursor: pointer;
 }
 
@@ -202,7 +191,7 @@
 
 #contenidoUserNoRegistrado {
     width: 100%;
-    height: 510px;
+    height: 540px;
 }
 
 #fraseDescriptiva {

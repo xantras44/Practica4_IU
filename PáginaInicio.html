@@ -2,19 +2,18 @@
     <html> 
         
         <head>
-            <link rel="stylesheet" href="CSS/estiloCSS.css"/>
+            <link rel="stylesheet" href="CSS/CSSPaginaInicio.css"/>
             <title>ALL eSPORT</title>
             <style type="CSS/estiloCSS.css"></style>
             <script src="JS/jquery-3.4.1.js"></script>
             <script src="JS/jquery-ui.js"></script>
-            <script src="JS/script.js"></script>
+            <script src="JS/scriptPaginaInicio.js"></script>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head> 
 
         <body id="Body"> 
             <header>
                 <div id = "cajaCabecera">
-                    <div><img id="menuPrincipal" src="IMG/menu.png"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
                     <div id="cajaTitulo"><strong>ALL eSPORT</strong></div>
                     <button class="cajaIniciarSesionRegistrarse" id="IniciarSesion" onclick="iniciarSesion()">Iniciar Sesion</button>
@@ -43,7 +42,7 @@
                 </form>
             </div>
             <div id="cajaFormularioIniciarSesion">
-                <form name="formularioIniciarSesion">
+                <form name="formularioIniciarSesion" onsubmit="buscarCookie()">
                     <legend class="legend">¡Bienvenido!</legend>
                     <br><br>
                     Email:<br>
@@ -52,7 +51,7 @@
                     Contraseña:<br>
                     <input class="campoIniciarSesion" type="password" name="contraseña" placeholder="Ej.: jsnf75j4" required maxlength="8" pattern="[a-z0-9]+">
                     <br><br>
-                    <div id="botonIniciarSesion" onclick="buscarCookie()">Iniciar Sesion</div>
+                    <input id="botonIniciarSesion" type="submit" value="Iniciar Sesion">
                     <div id="preguntaRegistrarse">¿No tienes una cuenta?</div>
                     <div id="opcionRegistrarse" onclick="registrarse()"><u>Registrate ahora</u></div>
                 </form>
