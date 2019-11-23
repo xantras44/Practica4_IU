@@ -1,8 +1,12 @@
 function registrarse() {
     var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
     cajaFormularioRegistro.style.visibility="visible";
-    var cajaFormularioRegistro = document.getElementById("cajaFormularioIniciarSesion");
-    cajaFormularioRegistro.style.visibility="hidden";
+    var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
+    cajaFormularioIniciarSesion.style.visibility="hidden";
+    var cajaFormularioIniciarSesion2 = document.getElementById("cajaFormularioIniciarSesion2");
+    cajaFormularioIniciarSesion2.style.visibility="hidden";
+    var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
+    cajaRegistroCompletado.style.visibility="hidden";
     var cajaFormularioRegistro = document.getElementById("contenidoUserNoRegistrado");
     cajaFormularioRegistro.style.visibility="hidden";
     var cajaFormularioRegistro = document.getElementById("IniciarSesion");
@@ -12,8 +16,8 @@ function registrarse() {
 }
 
 function iniciarSesion() {
-    var cajaFormularioLogIn = document.getElementById("cajaFormularioIniciarSesion");
-    cajaFormularioLogIn.style.visibility="visible";
+    var cajaFormularioLogIn2 = document.getElementById("cajaFormularioIniciarSesion2");
+    cajaFormularioLogIn2.style.visibility="visible";
     var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
     cajaFormularioRegistro.style.visibility="hidden";
     var cajaFormularioRegistro = document.getElementById("contenidoUserNoRegistrado");
@@ -108,7 +112,6 @@ function comprobarCookie() {
     }
     while (getCookie("email" + numero)!="");
     //if (username != "" && username != null) {
-        alert("Bienvenido");
         document.cookie= "nombreUsuario" + numero + "=" + document.forms["formularioRegistrarse"]["nombreFormulario"].value + ";"
         document.cookie= "email" + numero + "=" + document.forms["formularioRegistrarse"]["email"].value + ";"
         document.cookie= "contraseña" + numero + "=" + document.forms["formularioRegistrarse"]["contraseña"].value + ";"
@@ -116,5 +119,7 @@ function comprobarCookie() {
         cajaFormularioIniciarSesion.style.visibility="hidden";
         var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
         cajaFormularioIniciarSesion.style.visibility="visible";
+        var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
+        cajaRegistroCompletado.style.visibility="visible";
     //}
 }

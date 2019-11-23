@@ -29,14 +29,6 @@
     float: left;
 }
 
-#fondoBlanco {
-    height: 800px;
-    width: 100%;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.6);
-    visibility: hidden;
-}
-
 #cajaMenu {
     height: 800px;
     width: 35%;
@@ -49,6 +41,7 @@
     height: 800px;
     width: 65%;
     margin-left: 35%;
+    background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     visibility: hidden;
 }

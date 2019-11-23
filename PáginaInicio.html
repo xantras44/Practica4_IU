@@ -41,19 +41,40 @@
                     <div id="opcionIniciarSesion" onclick="iniciarSesion()"><u>Inicia sesion ahora</u></div>
                 </form>
             </div>
+            <div id="cajaRegistroCompletado">
+                <div id="registroCompletado">
+                    <div id="textoRegistroCompletado">Registro completado correctamente</div>
+                    <div><img id="imgRegistroCompletado" src="IMG/tickRegistro.png"></div>
+                </div>
+            </div>
             <div id="cajaFormularioIniciarSesion">
                 <form name="formularioIniciarSesion" onsubmit="buscarCookie()">
                     <legend class="legend">¡Bienvenido!</legend>
-                    <br><br>
+                    <br>
                     Email:<br>
                     <input class="campoIniciarSesion" type="email" name="email" placeholder="Ej.: ivanvg6@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     <br><br>
                     Contraseña:<br>
                     <input class="campoIniciarSesion" type="password" name="contraseña" placeholder="Ej.: jsnf75j4" required maxlength="8" pattern="[a-z0-9]+">
                     <br><br>
-                    <input id="botonIniciarSesion" type="submit" value="Iniciar Sesion">
-                    <div id="preguntaRegistrarse">¿No tienes una cuenta?</div>
-                    <div id="opcionRegistrarse" onclick="registrarse()"><u>Registrate ahora</u></div>
+                    <input class="botonIniciarSesion" type="submit" value="Iniciar Sesion">
+                    <div class="preguntaRegistrarse">¿Quieres otra cuenta?</div>
+                    <div class="opcionRegistrarse" onclick="registrarse()"><u>Registrate ahora</u></div>
+                </form>
+            </div>
+            <div id="cajaFormularioIniciarSesion2">
+                <form name="formularioIniciarSesion2" onsubmit="buscarCookie()">
+                    <legend class="legend">Iniciar Sesion</legend>
+                    <br>
+                    Email:<br>
+                    <input class="campoIniciarSesion" type="email" name="email" placeholder="Ej.: ivanvg6@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <br><br>
+                    Contraseña:<br>
+                    <input class="campoIniciarSesion" type="password" name="contraseña" placeholder="Ej.: jsnf75j4" required maxlength="8" pattern="[a-z0-9]+">
+                    <br><br>
+                    <input class="botonIniciarSesion" type="submit" value="Iniciar Sesion">
+                    <div class="preguntaRegistrarse">¿No tienes una cuenta?</div>
+                    <div class="opcionRegistrarse" onclick="registrarse()"><u>Registrate ahora</u></div>
                 </form>
             </div>
             <div id="contenidoUserNoRegistrado">
