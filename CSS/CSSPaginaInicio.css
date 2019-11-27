@@ -45,12 +45,12 @@
     text-align: center;
     color: white;
     float: right;
+    cursor: pointer;
 }
 
 /*No funciona*/
 .cajaIniciarSesionRegistrarse :hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    opacity: 50%;
 }
 
 #cajaFormularioRegistro {
