@@ -10,4 +10,5 @@ function cerrarMenu() {
     cajaMenu.style.visibility="hidden";
     var cjajCerrarMenu = document.getElementById("cajaCerrarMenu");
     cajaCerrarMenu.style.visibility= "hidden";
-}
+} 
+// Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
