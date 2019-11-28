@@ -3,6 +3,7 @@
     background-image: url("https://esports.eldesmarque.com/wp-content/uploads/2019/07/PykeProyecto.jpg");
     margin: 0px 0px 0px 0px;
     background-attachment: fixed;
+    width: 100%;
 }
 /*Comentario random de Iván pa ver si va jeje salu2 gente jaja*/
 #cajaCabecera {
@@ -233,7 +234,7 @@
 
 #contenidoUserNoRegistrado {
     width: 100%;
-    height: 540px;
+    height: 666px;
 }
 
 #fraseDescriptiva {
@@ -280,7 +281,8 @@
     float: right;
 }
 
-#cajaFooter {
+
+footer {
     width: 100%;
     background-color: rgb(0, 0, 0);
     border-top: aqua;
@@ -292,4 +294,10 @@
     background-color: rgb(48, 48, 48);
     color: white;
     float: left;
+}
+
+.columnasFooter img {
+    width: 10%;
+    height: auto;
+
 }
