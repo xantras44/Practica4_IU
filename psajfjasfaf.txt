@@ -1,6 +1,0 @@
-hola
-<<<<<<< HEAD
-pepino
-=======
-antinio es normal
->>>>>>> master
