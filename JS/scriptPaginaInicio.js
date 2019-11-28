@@ -3,8 +3,6 @@ function registrarse() {
     cajaFormularioRegistro.style.visibility="visible";
     var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
     cajaFormularioIniciarSesion.style.visibility="hidden";
-    var cajaFormularioIniciarSesion2 = document.getElementById("cajaFormularioIniciarSesion2");
-    cajaFormularioIniciarSesion2.style.visibility="hidden";
     var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
     cajaRegistroCompletado.style.visibility="hidden";
     var cajaFormularioRegistro = document.getElementById("contenidoUserNoRegistrado");
@@ -16,7 +14,7 @@ function registrarse() {
 }
 
 function iniciarSesion() {
-    var cajaFormularioLogIn2 = document.getElementById("cajaFormularioIniciarSesion2");
+    var cajaFormularioLogIn2 = document.getElementById("cajaFormularioIniciarSesion");
     cajaFormularioLogIn2.style.visibility="visible";
     var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
     cajaFormularioRegistro.style.visibility="hidden";
@@ -35,7 +33,7 @@ function buscarCookie() {
     var encontrado = 0;
     var numeroCont = 0;
     while(getCookie("email" + numero) != ""){
-        if (email == document.forms["formularioLogIn"]["email"].value) {
+        if (email == document.forms["formularioIniciarSesion"]["email"].value) {
             encontrado = 1;
             numeroCont = numero;
         }
@@ -44,7 +42,7 @@ function buscarCookie() {
     }
     if (encontrado == 1){
         var contraseña = getCookie("contraseña" + numeroCont);
-            if (contraseña == document.forms["formularioLogIn"]["contraseña"].value) {
+            if (contraseña == document.forms["formularioIniciarSesion"]["contraseña"].value) {
                 alert("Has iniciado sesion.");
                 var usuario = getCookie("nombreUsuario" + numeroCont);
                 document.getElementById("userName").textContent= usuario;
@@ -118,6 +116,7 @@ function comprobarCookie() {
         var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioRegistro");
         cajaFormularioIniciarSesion.style.visibility="hidden";
         var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
+        cajaFormularioIniciarSesion.style.marginTop = "10%";
         cajaFormularioIniciarSesion.style.visibility="visible";
         var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
         cajaRegistroCompletado.style.visibility="visible";
