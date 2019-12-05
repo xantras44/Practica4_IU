@@ -11,13 +11,27 @@
     background-color: rgb(48, 48, 48);
 }
 
-#menuPrincipal {
-    width: 4%;
+#iconoCerrar{
+    float: right;
+    width: 5%;
     height: auto;
-    margin-top: 2%;
-    margin-left: 2%;
+    margin-top: 8%;
+    margin-right: 7%;
+    opacity: 75%;
+    cursor: pointer;
+}
+#iconoCerrar:hover{
+    opacity: 100%;
+}
+
+#menuPrincipal {
+    width: 2%;
+    height: auto;
+    margin-top: 2.5%;
+    margin-left: 3%;
     float: left;
     opacity: 75%;
+    cursor: pointer;
 }
 
 #menuPrincipal:hover{
@@ -38,7 +52,7 @@
     height: 800px;
     width: 35%;
     position: fixed;
-    background-image: url("../IMG/fondoMenu.jpg");
+    background-color: black;
     visibility: hidden;
 }
 
@@ -60,23 +74,26 @@
 
 .opcionMenu {
     width: 100%;
-    height: 60px;
+    height: 80px;
     border-bottom: 6px solid grey;
-    background-color: green;
 }
 
 .iconoOpcionMenu {
-    height: 60px;
+    height: 50px;
     width: auto;
-    background-color: red;
     float: left;
+    margin-top: 3.25%;
+    margin-left: 8%;
 }
 
 .textoOpcionMenu {
-    height: 100%;
+    height: 50%;
     width: auto;
-    background-color: aqua;
     float: left;
+    color: white;
+    margin-top: 6%;
+    margin-left: 15%;
+    font-size: 150%;
 }
 
 #columnaPrincipalIzquierda {
@@ -135,19 +152,31 @@
     color: black;
 }
 
-#cajaFooter {
-    width: 100%;
-    height: 100px;
+footer{
+    height: 50px;
+    border: 2px solid white;
     background-color: rgb(48, 48, 48);
-    float: left;
+    text-align: center;
+    clear: both;
 }
 
-.columnasFooter {
-    width: 33.33%;
-    height: 100%;
+footer a img{
+    width: 3%;
+    height: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.3%;
+}
+
+footer a img:hover{
+    opacity: 0.5;
+}
+
+#cajaFooter {
+    width: 100%;
+    height: 50px;
     background-color: rgb(48, 48, 48);
     color: white;
-    float: left;
 }
 
 .clear {
