@@ -128,5 +128,7 @@ function comprobarCookie() {
         cajaFormularioIniciarSesion.style.visibility="visible";
         var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
         cajaRegistroCompletado.style.visibility="visible";
+        document.forms["formularioIniciarSesion"]["email"].value = "";
+        document.forms["formularioIniciarSesion"]["contraseña"].value = "";
     //}
 }

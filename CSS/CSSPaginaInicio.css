@@ -115,6 +115,7 @@
     font-size: 15px;
     cursor: pointer;
     float: left;
+    color: rgb(69,140,199);
 }
 
 #cajaRegistroCompletado {
@@ -219,6 +220,7 @@
     font-size: 15px;
     cursor: pointer;
     float: left;
+    color: rgb(69,140,199);
 }
 
 #cerrarRegistro {
