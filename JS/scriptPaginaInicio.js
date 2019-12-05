@@ -38,6 +38,11 @@ function cerrarTodo(){
     cajaFormularioRegistro.style.visibility="visible";
     var cajaFormularioRegistro = document.getElementById("Registrarse");
     cajaFormularioRegistro.style.visibility="visible";
+    document.forms["formularioRegistrarse"]["nombreUsuario"].value = "";
+    document.forms["formularioRegistrarse"]["email"].value = "";
+    document.forms["formularioRegistrarse"]["contraseña"].value = "";
+    document.forms["formularioIniciarSesion"]["email"].value = "";
+    document.forms["formularioIniciarSesion"]["contraseña"].value = "";
 }
 
 var emails;
