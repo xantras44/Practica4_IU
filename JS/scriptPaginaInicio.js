@@ -27,6 +27,19 @@ function iniciarSesion() {
     cajaFormularioRegistro.style.visibility="hidden";
 }
 
+function cerrarTodo(){
+    var cajaFormularioLogIn2 = document.getElementById("cajaFormularioIniciarSesion");
+    cajaFormularioLogIn2.style.visibility = "hidden";
+    var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
+    cajaFormularioRegistro.style.visibility = "hidden";
+    var cajaFormularioRegistro = document.getElementById("contenidoUserNoRegistrado");
+    cajaFormularioRegistro.style.visibility="visible";
+    var cajaFormularioRegistro = document.getElementById("IniciarSesion");
+    cajaFormularioRegistro.style.visibility="visible";
+    var cajaFormularioRegistro = document.getElementById("Registrarse");
+    cajaFormularioRegistro.style.visibility="visible";
+}
+
 var emails;
 
 function buscarCookie() {

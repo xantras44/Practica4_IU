@@ -50,9 +50,9 @@
     cursor: pointer;
 }
 
-/*No funciona*/
-.cajaIniciarSesionRegistrarse :hover {
-    opacity: 50%;
+.cajaIniciarSesionRegistrarse:hover {
+    border-color: blue;
+    color: blue;
 }
 
 #cajaFormularioRegistro {
