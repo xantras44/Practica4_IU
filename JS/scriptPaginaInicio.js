@@ -32,6 +32,8 @@ function cerrarTodo(){
     cajaFormularioLogIn2.style.visibility = "hidden";
     var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
     cajaFormularioRegistro.style.visibility = "hidden";
+    var cajaRegistroCompletado = document.getElementById("cajaRegistroCompletado");
+    cajaRegistroCompletado.style.visibility="hidden";
     var cajaFormularioRegistro = document.getElementById("contenidoUserNoRegistrado");
     cajaFormularioRegistro.style.visibility="visible";
     var cajaFormularioRegistro = document.getElementById("IniciarSesion");

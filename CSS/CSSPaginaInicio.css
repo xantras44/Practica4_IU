@@ -53,6 +53,7 @@
 .cajaIniciarSesionRegistrarse:hover {
     border-color: rgb(69,140,199);
     color: rgb(69,140,199);
+
 }
 
 #cajaFormularioRegistro {
@@ -220,7 +221,18 @@
     float: left;
 }
 
+#cerrarRegistro {
+    width: 100%;
+    height: 100%;
+    
+}
 
+#cerrarRegistro img {
+    width: 7%;
+    height: 7%;
+    float: right;
+    cursor: pointer;
+}
 @-webkit-keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -296,6 +308,7 @@ footer a img{
     margin-right: 5%;
     margin-top: 0.3%;
 }
+
 footer a img:hover{
     opacity: 0.5;
 }
