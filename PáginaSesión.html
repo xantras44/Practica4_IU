@@ -26,12 +26,12 @@
             </div>
             
             <header>
-                <div class="Cabecera">
+                <div class="Cabecera" onclick="cogerNombreUsuario()">
                     <div><img id="menuPrincipal" src="IMG/menu.png" onclick="abrirMenu()"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
                 </div>
             </header>
-            <div class="columnaPrincipalIzquierda">
+            <div id="columnaPrincipalIzquierda">
                 <div class="tituloColumnaPrincipal">Ultimas novedades</div>
                 <div class="actividad">
 
@@ -39,8 +39,9 @@
                 <div class="actividad">
 
                 </div>
+                <button class ="añadir" id ="añadirIzquierda" onclick="añadirActividad('Izquierda')"><strong>NUEVA ACTIVIDAD</strong></button>
             </div>
-            <div class="columnaPrincipalDerecha">
+            <div id="columnaPrincipalDerecha">
                 <div class="tituloColumnaPrincipal">Te puede interesar</div>
                 <div class="actividad">
 
@@ -48,6 +49,7 @@
                 <div class="actividad">
 
                 </div>
+                <button class ="añadir" id ="añadirDerecha" onclick="añadirActividad('Derecha')"><strong>NUEVA ACTIVIDAD</strong></button>
             </div>
             <footer>
                 <div id = "cajaFooter">

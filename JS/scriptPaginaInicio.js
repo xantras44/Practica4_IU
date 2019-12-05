@@ -15,6 +15,7 @@ function registrarse() {
 
 function iniciarSesion() {
     var cajaFormularioLogIn2 = document.getElementById("cajaFormularioIniciarSesion");
+    cajaFormularioIniciarSesion.style.marginTop = "2%";
     cajaFormularioLogIn2.style.visibility="visible";
     var cajaFormularioRegistro = document.getElementById("cajaFormularioRegistro");
     cajaFormularioRegistro.style.visibility="hidden";
@@ -25,6 +26,8 @@ function iniciarSesion() {
     var cajaFormularioRegistro = document.getElementById("Registrarse");
     cajaFormularioRegistro.style.visibility="hidden";
 }
+
+var emails;
 
 function buscarCookie() {
     event.preventDefault();
@@ -44,25 +47,8 @@ function buscarCookie() {
         var contraseña = getCookie("contraseña" + numeroCont);
             if (contraseña == document.forms["formularioIniciarSesion"]["contraseña"].value) {
                 alert("Has iniciado sesion.");
-                var usuario = getCookie("nombreUsuario" + numeroCont);
-                document.getElementById("userName").textContent= usuario;
-                var cajaFormularioIniciarSesion = document.getElementById("cajaFormularioIniciarSesion");
-                cajaFormularioIniciarSesion.style.visibility="hidden";
+                emails = email;
                 location.href ="PáginaSesión.html";
-                /*var columna = document.getElementById("cajaIzquierda");
-                columna.style.visibility= "visible";
-                var columna = document.getElementById("cajaCentral");
-                columna.style.visibility= "visible";
-                var columna = document.getElementById("cajaDerecha");
-                columna.style.visibility= "visible";
-                var cerrarSesion = document.getElementById("cerrarSesion");
-                cerrarSesion.style.visibility= "visible";
-                var footer = document.getElementById("cajaFooter");
-                footer.style.visibility= "visible";
-                var inicio = document.getElementById("iniciarSesion");
-                inicio.remove();
-                var registro = document.getElementById("registrarse");
-                registro.remove();*/
             }
             else{
                 alert("Contraseña incorrecta.");
@@ -72,6 +58,8 @@ function buscarCookie() {
         alert("Registrate para poder acceder.");
     }
 }
+
+window.currentUser = {name: emails};
 
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();

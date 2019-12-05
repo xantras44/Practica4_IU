@@ -1,6 +1,5 @@
 /*Comentario random*/
 #Body {
-    background-image: url("https://esports.eldesmarque.com/wp-content/uploads/2019/07/PykeProyecto.jpg");
     margin: 0px 0px 0px 0px;
     background-attachment: fixed;
     width: 100%;
@@ -299,5 +298,8 @@ footer {
 .columnasFooter img {
     width: 10%;
     height: auto;
+}
 
+.clear {
+    clear: both;
 }

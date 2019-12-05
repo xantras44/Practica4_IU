@@ -17,11 +17,16 @@
     margin-top: 2%;
     margin-left: 2%;
     float: left;
+    opacity: 75%;
+}
+
+#menuPrincipal:hover{
+    opacity: 100%;
 }
 
 #imgTitulo {
     width: 4%;
-    height: auto;
+    height: 4%;
     margin-top: 2%;
     margin-left: 42%;
     margin-right: 0.5%;
@@ -74,16 +79,17 @@
     float: left;
 }
 
-.columnaPrincipalIzquierda {
+#columnaPrincipalIzquierda {
     height: auto;
-    width: 49.95%;
+    width: 49.926%;
+    border-right: 0.5px solid grey;
     float: left;
 }
 
-.columnaPrincipalDerecha {
+#columnaPrincipalDerecha {
     height: auto;
-    width: 49.95%;
-    border-left: 1px solid grey;
+    width: 49.926%;
+    border-left: 0.5px solid grey;
     float: right;
 }
 
@@ -106,6 +112,29 @@
     background-color: rgb(83, 83, 83);
 }
 
+.añadir {
+    height: 100%;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 6%;
+    padding: 3%;
+    background-color: rgb(255, 14, 86);
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.añadir:hover {
+    height: 150%;
+    width: 80%;
+    margin-left: 10%;
+    background-color: red;
+    color: black;
+}
+
 #cajaFooter {
     width: 100%;
     height: 100px;
@@ -119,4 +148,8 @@
     background-color: rgb(48, 48, 48);
     color: white;
     float: left;
+}
+
+.clear {
+    clear: both;
 }
