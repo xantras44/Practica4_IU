@@ -55,3 +55,7 @@ function añadirActividad(columna) {
         cajaGrande.appendChild(button);
     }
 }
+
+function cerrarSesion(){
+    location.href ="PáginaInicio.html";
+}
