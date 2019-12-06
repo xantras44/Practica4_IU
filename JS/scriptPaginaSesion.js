@@ -19,6 +19,11 @@ function cerrarMenu() {
     var menuPrincipal = document.getElementById("menuPrincipal");
     menuPrincipal.style.visibility="visible";
 } 
+
+function mostrarNotificaciones() {
+    var popUpNotificaciones = document.getElementById("popUpNotificaciones");
+    popUpNotificaciones.style.visibility="visible";
+}
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
 
 function añadirActividad(columna) {
