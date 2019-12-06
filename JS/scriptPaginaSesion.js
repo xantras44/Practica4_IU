@@ -23,7 +23,6 @@ function cerrarMenu() {
     var menuPrincipal = document.getElementById("menuPrincipal");
     menuPrincipal.style.visibility="visible";
 } 
-<<<<<<< Updated upstream
 
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
@@ -33,8 +32,6 @@ function mostrarNotificaciones() {
     padre.removeChild(imagen);
 }
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
-=======
->>>>>>> Stashed changes
 
 function añadirActividad(columna) {
     var titulo = prompt("Introduzca la actividad", "Spinning");

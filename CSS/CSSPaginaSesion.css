@@ -31,10 +31,7 @@ Body {
     float: left;
     opacity: 75%;
     cursor: pointer;
-<<<<<<< Updated upstream
     transition: opacity 0.5s;
-=======
->>>>>>> Stashed changes
 }
 
 #menuPrincipal:hover{
@@ -51,7 +48,6 @@ Body {
     float: left;
 }
 
-<<<<<<< Updated upstream
 form.buscador input[type=text] {
     width: 15%;
     margin-top: 2%;
@@ -91,15 +87,12 @@ form.buscador button:hover {
     100% {transform: rotate(0deg);}
 }
 
-=======
->>>>>>> Stashed changes
 #notificaciones{
     width: 2%;
     height: auto;
     float: right;
     margin-right: 5%;
     margin-top: 2.5%;
-<<<<<<< Updated upstream
     cursor: pointer;
     z-index: 0;
     
@@ -111,16 +104,10 @@ form.buscador button:hover {
 }
 
 #numeroNotificaciones{
-=======
-}
-
-#numeronotificaciones{
->>>>>>> Stashed changes
     width: 1%;
     height: auto;
     float: right;
     margin-top: 2.5%;
-<<<<<<< Updated upstream
     margin-right: 0.2%;
     z-index: 10;
 }
@@ -176,9 +163,6 @@ form.buscador button:hover {
 @keyframes slideCerrar {
     0% {margin-left: 0%;}
     100% {margin-left: -50%; }
-=======
-    margin-right: -0.4%;
->>>>>>> Stashed changes
 }
 
 #cajaMenu {
@@ -211,10 +195,7 @@ form.buscador button:hover {
     border-bottom: 6px solid grey;
     cursor: pointer;
     background-image: url("../IMG/fondoMenu.jpg");
-<<<<<<< Updated upstream
     transition: border-color 0.5s;
-=======
->>>>>>> Stashed changes
 }
 .opcionMenu:hover{
     border-color: blue;
@@ -268,12 +249,9 @@ form.buscador button:hover {
     margin-right: auto;
     margin-top: 6%;
     margin-bottom: 5%;
-<<<<<<< Updated upstream
     background-image: url("https://image.freepik.com/vector-gratis/sombra-linea-luz-azul-sobre-fondo-negro-espacio-blanco_33869-659.jpg");
-=======
     /*background-color: rgb(83, 83, 83);*/
     background-image: url("../IMG/fondoActividad.PNG");
->>>>>>> Stashed changes
 }
 
 .añadir {
@@ -313,10 +291,7 @@ footer a img{
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 0.3%;
-<<<<<<< Updated upstream
     transition: opacity 0.2s;
-=======
->>>>>>> Stashed changes
 }
 
 footer a img:hover{
