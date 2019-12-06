@@ -4,6 +4,8 @@ function cogerNombreUsuario() {
 
 function abrirMenu() {
     var cajaMenu = document.getElementById("cajaMenu");
+    cajaMenu.style.animation="slide";
+    cajaMenu.style.animationDuration="0.5s";
     cajaMenu.style.visibility="visible";
     var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
     cajaCerrarMenu.style.visibility="visible";
@@ -13,7 +15,9 @@ function abrirMenu() {
 
 function cerrarMenu() {
     var cajaMenu = document.getElementById("cajaMenu");
-    cajaMenu.style.visibility="hidden";
+    cajaMenu.style.animation="slideCerrar";
+    cajaMenu.style.animationDuration="0.5s";
+    setTimeout(function(){cajaMenu.style.visibility="hidden"}, 500);
     var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
     cajaCerrarMenu.style.visibility= "hidden";
     var menuPrincipal = document.getElementById("menuPrincipal");
@@ -23,6 +27,9 @@ function cerrarMenu() {
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
     popUpNotificaciones.style.visibility="visible";
+    imagen = document.getElementById("numeroNotificaciones");
+    padre = imagen.parentNode;
+    padre.removeChild(imagen);
 }
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
 

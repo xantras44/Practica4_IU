@@ -65,6 +65,15 @@ form.buscador button:hover {
     background-color: red;
 }
 
+@keyframes rotar {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(25deg);
+        }
+    50% {transform: rotate(-25deg);}
+    75% {transform: rotate(25deg);}
+    100% {transform: rotate(0deg);}
+}
+
 #notificaciones{
     width: 2%;
     height: auto;
@@ -72,6 +81,13 @@ form.buscador button:hover {
     margin-right: 5%;
     margin-top: 2.5%;
     cursor: pointer;
+    z-index: 0;
+    
+}
+
+#notificaciones:hover{
+    animation: rotar;
+    animation-duration: 0.3s;
 }
 
 #numeroNotificaciones{
@@ -79,7 +95,8 @@ form.buscador button:hover {
     height: auto;
     float: right;
     margin-top: 2.5%;
-    margin-right: -0.4%;
+    margin-right: 0.2%;
+    z-index: 10;
 }
 
 .clear {
@@ -123,6 +140,16 @@ form.buscador button:hover {
     margin-left: 2%;
     font-size: 90%;
     float: left;
+}
+
+@keyframes slide {
+    0% {margin-left: -50%;}
+    100% {margin-left: 0%;}
+}
+
+@keyframes slideCerrar {
+    0% {margin-left: 0%;}
+    100% {margin-left: -50%; }
 }
 
 #cajaMenu {
