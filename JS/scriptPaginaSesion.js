@@ -138,3 +138,30 @@ function abrirTablon(){
     tablon.style.visibility = "visible";
 
 }
+
+var variable;
+var cajaExtra; /*Se usa para añadir cajas*/
+function openpopup(a) {
+    var i = 1;
+    while(i<10){
+        closepopup(i);
+        i++;
+    }
+    variable = document.getElementById("popup"+a);
+    variable.classList.add("show");
+}
+function closepopup(a){
+    variable = document.getElementById("popup"+a);
+    if(variable!=null){
+        variable.classList.remove("show");
+    }
+}
+function closebox(a){
+    if (window.confirm("¿Seguro que quieres borrar la caja?")) {
+        variable = document.getElementById("caja"+a);
+        if(a==1){
+            cajaExtra = variable.cloneNode(true);
+        }
+        variable.remove();
+    } else {}
+}
