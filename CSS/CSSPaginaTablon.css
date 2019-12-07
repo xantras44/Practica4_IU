@@ -3,7 +3,6 @@ Body {
     margin: 0px 0px 0px 0px;
     background-attachment: fixed;
 }
-
 .Cabecera {
     width: 100%;
     height: 100px;
@@ -243,6 +242,7 @@ form.buscador button:hover {
     width: 35%;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .opcionMenu {
@@ -275,184 +275,11 @@ form.buscador button:hover {
     font-size: 150%;
 }
 
-#columnaPrincipalIzquierda {
-    height: auto;
-    width: 49.926%;
-    border-right: 0.5px solid grey;
-    float: left;
-    margin-top: 7.3%;
-}
-
-#columnaPrincipalDerecha {
-    height: auto;
-    width: 49.926%;
-    border-left: 0.5px solid grey;
-    float: right;
-    margin-top: 7.3%;
-}
-
-.tituloColumnaPrincipal {
-    width: 24%;
-    margin-left: 38%;
-    margin-top: 4%;
-    text-align: center;
-    color: white;
-    font-size: 20px;
-}
-
-.actividad {
-    height: 300px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6%;
-    margin-bottom: 5%;
-    background-image: url("https://image.freepik.com/vector-gratis/sombra-linea-luz-azul-sobre-fondo-negro-espacio-blanco_33869-659.jpg");
-    /*background-color: rgb(83, 83, 83);*/
-    background-image: url("../IMG/fondoActividad.PNG");
-}
-
-.añadir {
-    height: 100%;
-    width: 60%;
-    margin-left: 20%;
-    margin-bottom: 6%;
-    padding: 3%;
-    background-color: rgb(255, 14, 86);
-    color: white;
-    font-size: 100%;
-    text-align: center;
-    border: none;
-    border-radius: 60px;
-    cursor: pointer;
-    transition: width 0.5s, margin-left 0.5s, background-color 0.5s, color 0.5s;
-}
-
-.añadir:hover {
-    width: 80%;
-    margin-left: 10%;
-    background-color: rgb(255, 30, 100);
-    color: black;
-}
-
-footer{
-    height: 50px;
-    border: 2px solid white;
-    background-color: rgb(48, 48, 48);
-    text-align: center;
-    clear: both;
-}
-
-footer a img{
-    width: 3%;
-    height: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0.3%;
-    transition: opacity 0.2s;
-}
-
-footer a img:hover{
-    opacity: 0.5;
-}
-
-#cajaFooter {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(48, 48, 48);
-    color: white;
-}
-
-.clear {
-    clear: both;
-}
-
-.imgcaja{
-    height: 50%;
-    width: 30%;
-    margin-left: 5%;
-    margin-top: 5%;
-    float: left;
-}
-.centroActividad{
-    width: 40%;
-    height: 30%;
-    margin-left: 45%;
-    margin-top: -13%;
-    float: left;
-}
-
-.textcaja{
-    width: 50%;
-    height: 46%;
-    font-size: 150%;
-    margin-left: 5%;
-    margin-top: 1%;
-    margin-bottom: 3%;
-    margin-right: 0%;
-    padding: 10px;
-    float: left;
-    color: rgb(0, 0, 0);
-}
-.textcaja .titulo{
-    cursor: pointer;
-}
-
-.cierre{
-    width: 3%;
-    height: 6%;
-    margin-right: 1.5%;
-    margin-top: 2%;
-    float: right;
-    cursor: pointer;
-}
-.icono{
-    height: 18%;
-    width: 10%;
-    margin-left: 4%;
-    margin-top: 6%;
-    float: left;
-    cursor: pointer;
-}
-.icono .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    margin-left: -6%;
-    margin-top: -3%;
-  }
-  .icono:hover .tooltiptext {
-    visibility: visible;
-  }
-  
-.icono img{
-    height: 100%;
-    width: 100%;
-}
-.icono .show {
-    visibility: visible;
-    cursor: default;
-    animation: fadeIn 0.4s;
-}
-.pieActividad{
-    font-size: 100%;
-    margin-right: 5%;
-    margin-top: 10%;
-    float: right;
-    color: rgb(0, 0, 0);
-}
-
 #miTablon{
     width: 100%;
     height: auto;
     margin-top: 7.3%;
     position: absolute;
-    visibility: hidden;
 }
 
 #botonAñadirCategoria{
@@ -475,6 +302,7 @@ footer a img:hover{
 
 .categoria{
     width: 80%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3%;
@@ -483,7 +311,7 @@ footer a img:hover{
     color: white;
     border: 1px solid white;
     background-color: black;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .opcionesCaja{
@@ -493,30 +321,89 @@ footer a img:hover{
     margin-top: -2%;
 }
 
-.categoria .actividad{
+.actividad{
+    background-image: url("../IMG/fondoActividad.PNG");
     width: 40%;
-    margin-left: 7%;
-    margin-right: auto;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    height: auto;
     float: left;
-    font-size: 67%;
+    margin-top: 2%;
+    margin-left: 7%;
+    margin-bottom: 5%;
 }
 
-.categoria .actividad .cierre{
+.imgcaja{
+    height: 50%;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 5%;
+    float: left;
+}
+
+.textcaja{
+    width: 50%;
+    height: 46%;
+    font-size: 150%;
+    margin-left: 5%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    margin-right: 0%;
+    padding: 10px;
+    font-size: 80%;
+    float: left;
+    color: rgb(0, 0, 0);
+}
+.textcaja .titulo{
+    cursor: pointer;
+}
+
+.cierre{
     width: 5%;
     height: auto;
-    margin-right: 1%;
-    margin-top: -40%;
+    float: right;
+    cursor: pointer;
 }
-.categoria .actividad .centroActividad{
-    margin-top: -15%;
+.pieActividad{
+    font-size: 80%;
+    margin-right: 5%;
+    margin-top: 5%;
+    float: right;
+    color: rgb(0, 0, 0);
+}
+.centroActividad{
+    width: 44%;
+    height: auto;
+    margin-left: 5%;
+}
+.icono{
+    height: 20%;
+    width: 15%;
+    margin-left: 4%;
+    margin-top: 2%;
+    float: left;
+    cursor: pointer;
+}
+.icono img{
+    height: 100%;
+    width: 100%;
 }
 
-.categoria .actividad .icono{
-    width: 20%;
-    height: 20%;
-}
+.icono .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    margin-left: -6%;
+    margin-top: -3%;
+  }
+
+  .icono:hover .tooltiptext {
+    visibility: visible;
+  }
+
 .textcaja .popuptext{
     width: 700px;
     height: 550px;
@@ -709,4 +596,36 @@ footer a img:hover{
     width: 50%;
     float: right;
     margin-top: 5%;
+}
+
+footer{
+    height: 50px;
+    border: 2px solid white;
+    background-color: rgb(48, 48, 48);
+    text-align: center;
+    clear: both;
+}
+
+footer a img{
+    width: 3%;
+    height: 80%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.3%;
+    transition: opacity 0.2s;
+}
+
+footer a img:hover{
+    opacity: 0.5;
+}
+
+#cajaFooter {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+}
+
+.clear {
+    clear: both;
 }
