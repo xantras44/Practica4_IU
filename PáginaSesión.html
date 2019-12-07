@@ -49,9 +49,9 @@
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
                     <div id="filtro" onclick="mostrarFiltros()">Filtrar</div>
                     <div id="popUpFiltros">
-                        <div class="cajaFiltro">Popularidad</div>
-                        <div class="cajaFiltro">Fecha de creacion</div>
-                        <div class="cajaFiltro">A - Z</div>
+                        <div class="cajaFiltro" onclick="ponerPopularidad()">Popularidad</div>
+                        <div class="cajaFiltro" onclick="ponerFecha()">Antigüedad</div>
+                        <div class="cajaFiltro" onclick="ponerAZ()">A - Z</div>
                     </div>
                     <form class="buscador">
                     <input type="text" placeholder="Search.." name="buscador">
@@ -209,6 +209,7 @@
                 </div>
                 <div class="categoria">
                     <div>Eventos creados por mi</div>
+                    <img class="opcionesCaja" src="IMG/3Puntos.png">
                     <div class="actividad">
                         <img class="imgcaja" src="IMG/cod.jpeg">
                         <div class="textcaja">

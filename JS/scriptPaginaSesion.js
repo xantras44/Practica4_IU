@@ -41,17 +41,33 @@ function cerrarMenu() {
 
 function mostrarFiltros() {
     var filtro = document.getElementById("filtro");
-    filtro.style.width="10%";
-    filtro.style.backgroundColor="rgb(80, 80, 80)";
-    popUpFiltros.style.visibility="visible";
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
+    else{
+        popUpFiltros.style.visibility="visible";
+    }
 }
 
 function cerrarFiltros() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     popUpFiltros.style.visibility="hidden";
+}
+
+function ponerPopularidad(){
     var filtro = document.getElementById("filtro");
-    filtro.style.width="6%";
-    filtro.style.backgroundColor="rgb(0, 0, 0)";
+    filtro.innerHTML = "Popularidad";
+    cerrarFiltros();
+}
+function ponerFecha(){
+    var filtro = document.getElementById("filtro");
+    filtro.innerHTML = "Antigüedad";
+    cerrarFiltros();
+}
+function ponerAZ(){
+    var filtro = document.getElementById("filtro");
+    filtro.innerHTML = "A-Z";
+    cerrarFiltros();
 }
 
 function mostrarNotificaciones() {

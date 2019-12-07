@@ -483,12 +483,34 @@ footer a img:hover{
     overflow: auto;
 }
 
+.opcionesCaja{
+    float: right;
+    width: 2%;
+    height: auto;
+    margin-top: -2%;
+}
+
 .categoria .actividad{
     width: 40%;
-    margin-left: auto;
+    margin-left: 7%;
     margin-right: auto;
     margin-top: 2%;
     margin-bottom: 2%;
     float: left;
+    font-size: 67%;
 }
 
+.categoria .actividad .cierre{
+    width: 5%;
+    height: auto;
+    margin-right: 1%;
+    margin-top: -40%;
+}
+.categoria .actividad .centroActividad{
+    margin-top: -30%;
+}
+
+.categoria .actividad .icono{
+    width: 20%;
+    height: 20%;
+}
