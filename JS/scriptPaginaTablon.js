@@ -1,9 +1,12 @@
-function cogerNombreUsuario() {
-    alert(window.currentUser.name);
-}
-
 function abrirMenu() {
     var popUpFiltros = document.getElementById("popUpFiltros");
+    if(localStorage.getItem("Usuario") != null){
+        var nombreUsuario = localStorage.getItem("Usuario");
+        document.getElementById("nombrePerfil").textContent = nombreUsuario;
+        }
+    else{
+        document.getElementById("nombrePerfil").textContent = "Mi perfil";   
+        }
     if(popUpFiltros.style.visibility == "visible"){
         cerrarFiltros();
     }
@@ -125,7 +128,13 @@ function closebox(a){
 }
 
 function cogerTexto(numero){
-    var a = document.getElementById("barra" + numero).textContent;
+    var usuario = localStorage.getItem("Usuario");
+    if (usuario != null){
+    var a = usuario + ": " + (document.getElementById("barra" + numero).textContent);
+    }
+    else{
+    var a = "Invitado: " + (document.getElementById("barra" + numero).textContent);    
+    }
     var texto = document.createElement("div");
     texto.setAttribute("class", "textoChat");
     texto.textContent = a;

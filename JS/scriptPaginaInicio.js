@@ -68,6 +68,8 @@ function buscarCookie() {
             if (contraseña == document.forms["formularioIniciarSesion"]["contraseña"].value) {
                 alert("Has iniciado sesion.");
                 emails = email;
+                var nombreUser = getCookie("nombreUsuario" + numeroCont);
+                localStorage.setItem("Usuario", nombreUser);
                 location.href ="PáginaSesión.html";
             }
             else{

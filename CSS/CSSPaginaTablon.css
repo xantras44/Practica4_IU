@@ -342,13 +342,12 @@ form.buscador button:hover {
 .textcaja{
     width: 50%;
     height: 46%;
-    font-size: 150%;
+    font-size: 115%;
     margin-left: 5%;
     margin-top: 1%;
     margin-bottom: 3%;
     margin-right: 0%;
     padding: 10px;
-    font-size: 80%;
     float: left;
     color: rgb(0, 0, 0);
 }
@@ -553,6 +552,7 @@ form.buscador button:hover {
     margin-right: 0%;
     padding: 1%;
     width: 80%;
+    height: 20%;
     border-radius: 15px;
     clear: both;
     overflow: auto;
