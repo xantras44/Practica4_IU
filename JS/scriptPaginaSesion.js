@@ -37,7 +37,6 @@ function cerrarMenu() {
     cajaCerrarMenu2.style.visibility= "hidden";
     var menuPrincipal = document.getElementById("menuPrincipal");
     menuPrincipal.style.visibility="visible";
-<<<<<<< Updated upstream
 }
 
 function mostrarFiltros() {
@@ -70,9 +69,6 @@ function ponerAZ(){
     filtro.innerHTML = "A-Z";
     cerrarFiltros();
 }
-=======
-} 
->>>>>>> Stashed changes
 
 function mostrarNotificaciones() {
     var popUpFiltros = document.getElementById("popUpFiltros");
@@ -90,10 +86,7 @@ function mostrarNotificaciones() {
         padre.removeChild(imagen);
     }
 }
-<<<<<<< Updated upstream
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
-=======
->>>>>>> Stashed changes
 
 function añadirActividad(columna) {
     var popUpFiltros = document.getElementById("popUpFiltros");
@@ -122,7 +115,6 @@ function añadirActividad(columna) {
     }
 }
 
-<<<<<<< Updated upstream
 function cerrarSesion(){
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -145,9 +137,7 @@ function abrirTablon(){
     var tablon = document.getElementById("miTablon");
     tablon.style.visibility = "visible";
 
-=======
-
-/* mAnuel-AA*/
+}
 
 var variable;
 var cajaExtra; /*Se usa para añadir cajas*/
@@ -174,5 +164,4 @@ function closebox(a){
         }
         variable.remove();
     } else {}
->>>>>>> Stashed changes
 }

@@ -14,22 +14,11 @@
             <div id="cajaCerrarMenu2"></div>
             <div id="cajaMenu">
                 <div id="cajaMenu2">
-<<<<<<< Updated upstream
                     <div class="opcionMenu">
                         <img class="iconoOpcionMenu" src="IMG/perfil2.png">
                         <div class="textoOpcionMenu">Mi perfil</div>
                     </div>
                     <div class="opcionMenu" onclick="abrirTablon()">
-=======
-                    <div class="Cabecera">
-                        <img id="profileImg" src="IMG/profile.png">
-                    </div>
-                    <div class="opcionMenu" onclick="">
-                        <img class="iconoOpcionMenu" src="IMG/perfil2.png">
-                        <div class="textoOpcionMenu">Mi perfil</div>
-                    </div>
-                    <div class="opcionMenu" onclick="">
->>>>>>> Stashed changes
                         <img class="iconoOpcionMenu" src="IMG/tablon2.png">
                         <div class="textoOpcionMenu">Mi tablón de eventos</div>
                     </div>
@@ -42,13 +31,6 @@
                         <div class="textoOpcionMenu">Competiciones</div>
                     </div>
                     <div class="opcionMenu" onclick="">
-<<<<<<< Updated upstream
-=======
-                        <img class="iconoOpcionMenu" src="IMG/ajustes2.png">
-                        <div class="textoOpcionMenu">Configuración</div>
-                    </div>
-                    <div class="opcionMenu" onclick="">
->>>>>>> Stashed changes
                         <img class="iconoOpcionMenu" src="IMG/informacion2.png">
                         <div class="textoOpcionMenu">Sobre nosotros</div>
                     </div>
@@ -59,18 +41,12 @@
                     
                 </div>
             </div>
-<<<<<<< Updated upstream
             <div id="cajaCerrarMenu" onclick="cerrarMenu()"></div>
-=======
-            <div id="cajaCerrarMenu" onclick="cerrarMenu()" >
-            </div>
->>>>>>> Stashed changes
             
             <header>
                 <div class="Cabecera" onclick="cogerNombreUsuario()">
                     <div><img id="menuPrincipal" src="IMG/menu.png" onclick="abrirMenu()"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
-<<<<<<< Updated upstream
                     <div id="filtro" onclick="mostrarFiltros()">Filtrar</div>
                     <div id="popUpFiltros">
                         <div class="cajaFiltro" onclick="ponerPopularidad()">Popularidad</div>
@@ -78,9 +54,6 @@
                         <div class="cajaFiltro" onclick="ponerAZ()">A - Z</div>
                     </div>
                     <form class="buscador">
-=======
-                    <form class="buscador" action="/action_page.php">
->>>>>>> Stashed changes
                     <input type="text" placeholder="Search.." name="buscador">
                     <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
@@ -302,6 +275,7 @@
                         <img src="IMG/logoLol.png">
                         <span class="tooltiptext">LOL</span>
                     </div>
+
                 </div>
                 <div id="caja5" class="actividad">
                     <img class="imgcaja" src="IMG/cod.jpeg">
@@ -366,7 +340,42 @@
                     <div class="actividad">
                         <img class="imgcaja" src="IMG/cod.jpeg">
                         <div class="textcaja">
-                            <p onclick="openpopup(3)">Torneo 2 vs 2 de COD</p>
+                            <p class="titulo" onclick="openpopup(3)">Torneo 2 vs 2 de COD</p>
+                            <p>Plazas libre: 16</p>
+                            <p>Premio económico: 150 €</p>
+                        </div>
+                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="abrirMenu()">
+                        <p class="pieActividad">17/07/2020  21:00</p>
+                        <p class="pieActividad">#CD</p>
+                        <p class="pieActividad">#MW</p>
+                        <div class="icono">
+                            <img src="IMG/codLogo.png">
+                            <span class="tooltiptext">Call of Duty</span>
+                        </div>
+                    </div>
+                    <div class="actividad">
+                        <img class="imgcaja" src="IMG/iberianCup.png">
+                        <div class="textcaja">
+                            <p class="titulo" onclick="openpopup(3)">Partido de la Iberian Cup</p>
+                        </div>
+                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(1)">
+                        <img class="centroActividad" src="IMG/mlvsvg.PNG">
+                        <p class="pieActividad">17/07/2020  21:00</p>
+                        <p class="pieActividad">#IberianCUP</p>
+                        <p class="pieActividad">#LOL</p>
+                        <div class="icono">
+                            <img src="IMG/logoLol.png">
+                            <span class="tooltiptext">LOL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="categoria">
+                    <div>Participaciones</div>
+                    <img class="opcionesCaja" src="IMG/3Puntos.png">
+                    <div class="actividad">
+                        <img class="imgcaja" src="IMG/cod.jpeg">
+                        <div class="textcaja">
+                            <p class="titulo" onclick="openpopup(3)">Torneo 2 vs 2 de COD</p>
                             <p>Plazas libre: 16</p>
                             <p>Premio económico: 150 €</p>
                         </div>
@@ -382,7 +391,7 @@
                     <div class="actividad">
                         <img class="imgcaja" src="IMG/iberianCup.png">
                         <div class="textcaja">
-                            <p onclick="openpopup(3)">Partido de la Iberian Cup</p>
+                            <p class="titulo" onclick="openpopup(3)">Partido de la Iberian Cup</p>
                         </div>
                         <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(1)">
                         <img class="centroActividad" src="IMG/mlvsvg.PNG">
@@ -396,10 +405,8 @@
                     </div>
                 </div>
                 <div class="categoria">
-                    
-                </div>
-                <div class="categoria">
-                    
+                        <div>Mis intereses</div>
+                        <img class="opcionesCaja" src="IMG/3Puntos.png">
                 </div>
             </div>
             <footer>
