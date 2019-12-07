@@ -9,6 +9,7 @@ Body {
     height: 100px;
     background-color: rgb(48, 48, 48);
     position: fixed;
+    z-index: 1;
 }
 
 #iconoCerrar{
@@ -391,6 +392,8 @@ footer a img:hover{
     padding: 10px;
     float: left;
     color: rgb(0, 0, 0);
+}
+.textcaja .titulo{
     cursor: pointer;
 }
 
@@ -448,7 +451,6 @@ footer a img:hover{
     height: auto;
     margin-top: 7.3%;
     position: absolute;
-    z-index: -1;
     visibility: hidden;
 }
 
@@ -507,7 +509,7 @@ footer a img:hover{
     margin-top: -40%;
 }
 .categoria .actividad .centroActividad{
-    margin-top: -30%;
+    margin-top: -15%;
 }
 
 .categoria .actividad .icono{
