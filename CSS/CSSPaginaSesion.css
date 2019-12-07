@@ -225,7 +225,7 @@ form.buscador button:hover {
     width: 49.926%;
     border-right: 0.5px solid grey;
     float: left;
-    margin-top: 7%;
+    margin-top: 7.3%;
 }
 
 #columnaPrincipalDerecha {
@@ -233,7 +233,7 @@ form.buscador button:hover {
     width: 49.926%;
     border-left: 0.5px solid grey;
     float: right;
-    margin-top: 7%;
+    margin-top: 7.3%;
 }
 
 .tituloColumnaPrincipal {
@@ -389,5 +389,54 @@ footer a img:hover{
     margin-top: 10%;
     float: right;
     color: rgb(0, 0, 0);
+}
+
+#miTablon{
+    width: 100%;
+    height: auto;
+    margin-top: 7.3%;
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+
+#botonAñadirCategoria{
+    border: 1px solid white;
+    background-color: rgb(48, 48, 48);
+    width: 15%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    font-size: 120%;
+    color: white;
+}
+
+#botonAñadirCategoria img{
+    width: 10%;
+    float: left;
+    margin-right: 5%;
+}
+
+.categoria{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    padding: 1%;
+    font-size: 130%;
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    overflow: auto;
+}
+
+.categoria .actividad{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    float: left;
 }
 

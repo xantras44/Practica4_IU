@@ -67,3 +67,17 @@ function añadirActividad(columna) {
 function cerrarSesion(){
     location.href ="PáginaInicio.html";
 }
+
+function abrirTablon(){
+    var cajaIzquierda = document.getElementById("columnaPrincipalIzquierda");
+    cajaIzquierda.style.visibility = "hidden";
+    var cajaDerecha = document.getElementById("columnaPrincipalDerecha");
+    cajaDerecha.style.visibility = "hidden";
+    var menu = document.getElementById("cajaMenu");
+    menu.style.visibility = "hidden";
+    var cerrarmenu = document.getElementById("cajaCerrarMenu");
+    cerrarmenu.style.visibility = "hidden";
+    var tablon = document.getElementById("miTablon");
+    tablon.style.visibility = "visible";
+
+}
