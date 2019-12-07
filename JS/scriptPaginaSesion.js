@@ -3,6 +3,10 @@ function cogerNombreUsuario() {
 }
 
 function abrirMenu() {
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
     var cajaMenu = document.getElementById("cajaMenu");
     if(cajaMenu.style.visibility == "visible"){
         cerrarMenu();
@@ -13,21 +17,48 @@ function abrirMenu() {
         cajaMenu.style.visibility="visible";
         var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
         cajaCerrarMenu.style.visibility="visible";
+        var cajaCerrarMenu2 = document.getElementById("cajaCerrarMenu2");
+        cajaCerrarMenu2.style.visibility="visible";
     }
 }
 
 function cerrarMenu() {
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
     var cajaMenu = document.getElementById("cajaMenu");
     cajaMenu.style.animation="slideCerrar";
     cajaMenu.style.animationDuration="0.5s";
     setTimeout(function(){cajaMenu.style.visibility="hidden"}, 500);
     var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
     cajaCerrarMenu.style.visibility= "hidden";
+    var cajaCerrarMenu2 = document.getElementById("cajaCerrarMenu2");
+    cajaCerrarMenu2.style.visibility= "hidden";
     var menuPrincipal = document.getElementById("menuPrincipal");
     menuPrincipal.style.visibility="visible";
-} 
+}
+
+function mostrarFiltros() {
+    var filtro = document.getElementById("filtro");
+    filtro.style.width="10%";
+    filtro.style.backgroundColor="rgb(80, 80, 80)";
+    popUpFiltros.style.visibility="visible";
+}
+
+function cerrarFiltros() {
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    popUpFiltros.style.visibility="hidden";
+    var filtro = document.getElementById("filtro");
+    filtro.style.width="6%";
+    filtro.style.backgroundColor="rgb(0, 0, 0)";
+}
 
 function mostrarNotificaciones() {
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
     if(popUpNotificaciones.style.visibility == "visible"){
         popUpNotificaciones.style.visibility="hidden";
@@ -42,6 +73,10 @@ function mostrarNotificaciones() {
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
 
 function añadirActividad(columna) {
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
     var titulo = prompt("Introduzca la actividad", "Spinning");
     var foto = prompt("Introduzca la foto", "https://i.blogs.es/dc3961/istock-918931148/450_1000.jpg");
     var descripcion = prompt("Introduzca la descripcion de la nueva actividad", "No se que es esto.");
@@ -65,6 +100,10 @@ function añadirActividad(columna) {
 }
 
 function cerrarSesion(){
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
     location.href ="PáginaInicio.html";
 }
 
@@ -77,6 +116,8 @@ function abrirTablon(){
     menu.style.visibility = "hidden";
     var cerrarmenu = document.getElementById("cajaCerrarMenu");
     cerrarmenu.style.visibility = "hidden";
+    var cerrarmenu2 = document.getElementById("cajaCerrarMenu2");
+    cerrarmenu2.style.visibility = "hidden";
     var tablon = document.getElementById("miTablon");
     tablon.style.visibility = "visible";
 

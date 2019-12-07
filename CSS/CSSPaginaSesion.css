@@ -43,10 +43,54 @@ Body {
     width: 4%;
     height: 4%;
     margin-top: 1.6%;
-    margin-left: 32%;
+    margin-left: 29.9%;
     margin-right: 0.5%;
     border-radius: 100%;
     float: left;
+}
+
+#filtro {
+    width: 6%;
+    height: 30%;
+    margin-top: 2%;
+    margin-left: 0.5%;
+    padding-top: 0.8%;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid gray;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    transition: width 0.5s, background-color 0.3s;
+}
+
+#filtro:hover {
+    width: 10%;
+    background-color: rgb(80, 80, 80);
+}
+
+#popUpFiltros {
+    height: auto;
+    width: 9%;
+    margin-top: 5.2%;
+    margin-left: 39.9%;
+    position: absolute;
+    visibility: hidden;
+}
+
+.cajaFiltro {
+    height: 100%;
+    width: 100%;
+    padding: 6%;
+    background-color: rgb(201, 201, 201);
+    border: 0.5px solid gray;
+    cursor: pointer;
+}
+
+.cajaFiltro:hover {
+    background-color: rgb(56, 56, 56);
+    border: 0.5px solid rgb(209, 209, 209);
+    color: white;
 }
 
 form.buscador input[type=text] {
@@ -57,6 +101,7 @@ form.buscador input[type=text] {
     color: white;
     background: rgb(0, 0, 0);
     border: 1px solid grey;
+    border-right: none;
     float: left;
 }
 
@@ -95,7 +140,6 @@ form.buscador button:hover {
     margin-top: 2.5%;
     cursor: pointer;
     z-index: 0;
-    
 }
 
 #notificaciones:hover{
@@ -180,6 +224,14 @@ form.buscador button:hover {
     margin-left: 35%;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
+    visibility: hidden;
+}
+
+#cajaCerrarMenu2 {
+    height: 800px;
+    width: 35%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
     visibility: hidden;
 }
 

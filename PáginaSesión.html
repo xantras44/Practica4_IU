@@ -11,6 +11,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
         <body>
+            <div id="cajaCerrarMenu2"></div>
             <div id="cajaMenu">
                 <div id="cajaMenu2">
                     <div class="opcionMenu">
@@ -40,14 +41,19 @@
                     
                 </div>
             </div>
-            <div id="cajaCerrarMenu" onclick="cerrarMenu()" >
-            </div>
+            <div id="cajaCerrarMenu" onclick="cerrarMenu()"></div>
             
             <header>
                 <div class="Cabecera" onclick="cogerNombreUsuario()">
                     <div><img id="menuPrincipal" src="IMG/menu.png" onclick="abrirMenu()"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
-                    <form class="buscador" action="/action_page.php">
+                    <div id="filtro" onclick="mostrarFiltros()">Filtrar</div>
+                    <div id="popUpFiltros">
+                        <div class="cajaFiltro">Popularidad</div>
+                        <div class="cajaFiltro">Fecha de creacion</div>
+                        <div class="cajaFiltro">A - Z</div>
+                    </div>
+                    <form class="buscador">
                     <input type="text" placeholder="Search.." name="buscador">
                     <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
