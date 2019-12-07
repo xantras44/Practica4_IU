@@ -4,13 +4,16 @@ function cogerNombreUsuario() {
 
 function abrirMenu() {
     var cajaMenu = document.getElementById("cajaMenu");
-    cajaMenu.style.animation="slide";
-    cajaMenu.style.animationDuration="0.5s";
-    cajaMenu.style.visibility="visible";
-    var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
-    cajaCerrarMenu.style.visibility="visible";
-    var menuPrincipal = document.getElementById("menuPrincipal");
-    menuPrincipal.style.visibility="hidden";
+    if(cajaMenu.style.visibility == "visible"){
+        cerrarMenu();
+    }
+    else{
+        cajaMenu.style.animation="slide";
+        cajaMenu.style.animationDuration="0.5s";
+        cajaMenu.style.visibility="visible";
+        var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
+        cajaCerrarMenu.style.visibility="visible";
+    }
 }
 
 function cerrarMenu() {
@@ -26,10 +29,15 @@ function cerrarMenu() {
 
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
-    popUpNotificaciones.style.visibility="visible";
-    imagen = document.getElementById("numeroNotificaciones");
-    padre = imagen.parentNode;
-    padre.removeChild(imagen);
+    if(popUpNotificaciones.style.visibility == "visible"){
+        popUpNotificaciones.style.visibility="hidden";
+    }
+    else{
+        popUpNotificaciones.style.visibility="visible";
+        imagen = document.getElementById("numeroNotificaciones");
+        padre = imagen.parentNode;
+        padre.removeChild(imagen);
+    }
 }
 // Esto eh un comentario de Manuel-AA desde Pinto y para toda la mujere de Puelto Rico
 
