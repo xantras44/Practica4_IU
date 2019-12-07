@@ -217,6 +217,7 @@ form.buscador button:hover {
     background-color: black;
     visibility: hidden;
     margin-top: 7.4%;
+    z-index: 1;
 }
 
 #cajaCerrarMenu {
@@ -226,6 +227,7 @@ form.buscador button:hover {
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
     visibility: hidden;
+    z-index: 1;
 }
 
 #cajaCerrarMenu2 {
