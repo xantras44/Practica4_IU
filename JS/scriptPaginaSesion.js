@@ -165,3 +165,55 @@ function closebox(a){
         variable.remove();
     } else {}
 }
+
+function cogerTexto(numero){
+    var a = document.getElementById("barra" + numero).textContent;
+    var texto = document.createElement("div");
+    texto.setAttribute("class", "textoChat");
+    texto.textContent = a;
+    document.getElementById("barra" + numero).style.marginTop = "2%";
+    document.getElementById("enviar" + numero).style.marginTop = "2%";
+    var contenedor = document.getElementById("chat" + numero);
+    contenedor.insertBefore( texto, document.getElementById("barra" + numero));
+  }
+
+  function cambiarEstrella(numero, caja){
+    if(document.getElementById("estrella" + numero + caja) != null){
+        while (numero != 0){
+        document.getElementById("estrella" + numero + caja).src="IMG/estrellaRellena.png";
+        numero--;
+        }
+    }
+}
+
+function volverEstrella(numero, caja){
+    if(document.getElementById("estrella" + numero + caja) != null){
+        while(numero != 0){
+        document.getElementById("estrella" + numero + caja).src="IMG/estrellaVacia.png";
+        numero--;
+        }
+    }
+}
+
+function valorar(numero, caja){
+
+    if (document.getElementById("estrellaAcabada" + numero + caja) != null){
+        numero++;
+        while(numero != 6){
+            document.getElementById("estrellaAcabada" + numero + caja).src="IMG/estrellaVacia.png";
+            document.getElementById("estrellaAcabada" + numero + caja).className="estrellas";
+            document.getElementById("estrellaAcabada" + numero + caja).id="estrella" + numero + caja;
+            numero++;
+        }
+    }
+
+    if (document.getElementById("estrella" + numero + caja) != null){
+        while(numero != 0){
+        document.getElementById("estrella" + numero + caja).src="IMG/estrellaRellena.png";
+        document.getElementById("estrella" + numero + caja).className="estrellas";
+        document.getElementById("estrella" + numero + caja).id="estrellaAcabada" + numero + caja;
+        numero--;
+        }
+    }
+
+}
