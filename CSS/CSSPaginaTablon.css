@@ -289,6 +289,7 @@ form.buscador button:hover {
     margin-top: 3%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3%;
     padding: 1%;
     font-size: 120%;
     color: white;
@@ -305,7 +306,7 @@ form.buscador button:hover {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
+    margin-bottom: 3%;
     padding: 1%;
     font-size: 130%;
     color: white;
@@ -603,7 +604,6 @@ footer{
     border: 2px solid white;
     background-color: rgb(48, 48, 48);
     text-align: center;
-    clear: both;
 }
 
 footer a img{
