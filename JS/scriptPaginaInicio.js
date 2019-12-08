@@ -66,7 +66,6 @@ function buscarCookie() {
     if (encontrado == 1){
         var contraseña = getCookie("contraseña" + numeroCont);
             if (contraseña == document.forms["formularioIniciarSesion"]["contraseña"].value) {
-                alert("Has iniciado sesion.");
                 emails = email;
                 var nombreUser = getCookie("nombreUsuario" + numeroCont);
                 localStorage.setItem("Usuario", nombreUser);
