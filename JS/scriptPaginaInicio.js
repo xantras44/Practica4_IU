@@ -70,7 +70,8 @@ function buscarCookie() {
                 emails = email;
                 var nombreUser = getCookie("nombreUsuario" + numeroCont);
                 localStorage.setItem("Usuario", nombreUser);
-                localStorage.setItem("email", email);
+                var email2 = getCookie("email" + numeroCont);
+                localStorage.setItem("email", email2);
                 location.href ="PáginaSesión.html";
             }
             else{
