@@ -306,17 +306,35 @@ form.buscador button:hover {
     font-size: 120%;
     color: white;
     cursor: pointer;
+    transition: width 0.5s, padding-top 0.5s, border-color 0.5s, color 0.5s;
 }
 
 #botonAñadirCategoria:hover{
+    width: 20%;
     border-color: teal;
     color: teal;
 }
 
-#botonAñadirCategoria img{
-    width: 10%;
+#contenidoBotonAñadirCategoria {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imgAñadirCategoria{
+    margin-right: 2%;
     float: left;
-    margin-right: 5%;
+}
+
+#imgAñadirCategoria img {
+    width: 30px;
+}
+
+#textoAñadirCategoria {
+    width: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+    float: left;
 }
 
 .categoria{

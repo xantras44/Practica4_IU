@@ -3,10 +3,10 @@ function abrirMenu() {
     if(localStorage.getItem("Usuario") != null){
         var nombreUsuario = localStorage.getItem("Usuario");
         document.getElementById("nombrePerfil").textContent = nombreUsuario;
-        }
+    }
     else{
         document.getElementById("nombrePerfil").textContent = "Mi perfil";   
-        }
+    }
     if(popUpFiltros.style.visibility == "visible"){
         cerrarFiltros();
     }
