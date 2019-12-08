@@ -191,6 +191,31 @@ function valorar(numero, caja){
         numero--;
         }
     }
+}
 
+function añadirCategoria(){
+    var categoria;
+    if(categoria = prompt("Introduzca el nombre de la categoria", "Mis eventos")){
+        if (categoria == "") {
+            alert("El nombre es obligatorio");
+        }
+        else{
+            var cajaGrande = document.getElementById("miTablon");
+            var nuevaCategoria = document.createElement("div");
+            nuevaCategoria.setAttribute("class", "categoria");
+            cajaGrande.appendChild(nuevaCategoria);
+            var nombreCategoria = document.createElement("div");
+            nuevaCategoria.appendChild(nombreCategoria);
+            nombreCategoria.innerHTML = categoria;
+            var opcion = document.createElement("img");
+            opcion.setAttribute("class", "opcionesCaja");
+            opcion.setAttribute("src", "IMG/3Puntos.png");
+            nuevaCategoria.appendChild(opcion);
+            window.alert("Se ha creado correctamente")
+        }
+    }
+    else{
+
+    }
 }
 

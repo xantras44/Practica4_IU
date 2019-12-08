@@ -122,7 +122,7 @@ form.buscador button {
 }
 
 form.buscador button:hover {
-    background-color: red;
+    background-color: teal;
 }
 
 @keyframes rotar {
@@ -310,29 +310,6 @@ form.buscador button:hover {
     background-image: url("https://image.freepik.com/vector-gratis/sombra-linea-luz-azul-sobre-fondo-negro-espacio-blanco_33869-659.jpg");
     /*background-color: rgb(83, 83, 83);*/
     background-image: url("../IMG/fondoActividad.PNG");
-}
-
-.añadir {
-    height: 100%;
-    width: 60%;
-    margin-left: 20%;
-    margin-bottom: 6%;
-    padding: 3%;
-    background-color: rgb(255, 14, 86);
-    color: white;
-    font-size: 100%;
-    text-align: center;
-    border: none;
-    border-radius: 60px;
-    cursor: pointer;
-    transition: width 0.5s, margin-left 0.5s, background-color 0.5s, color 0.5s;
-}
-
-.añadir:hover {
-    width: 80%;
-    margin-left: 10%;
-    background-color: rgb(255, 30, 100);
-    color: black;
 }
 
 footer{

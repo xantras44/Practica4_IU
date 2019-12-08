@@ -133,7 +133,7 @@ form.buscador button {
 }
 
 form.buscador button:hover {
-    background-color: red;
+    background-color: teal;
 }
 
 @keyframes rotar {
@@ -305,6 +305,12 @@ form.buscador button:hover {
     padding: 1%;
     font-size: 120%;
     color: white;
+    cursor: pointer;
+}
+
+#botonAñadirCategoria:hover{
+    border-color: teal;
+    color: teal;
 }
 
 #botonAñadirCategoria img{
@@ -332,6 +338,11 @@ form.buscador button:hover {
     width: 2%;
     height: auto;
     margin-top: -2%;
+    opacity: 75%;
+    cursor: pointer;
+}
+.opcionesCaja:hover{
+    opacity: 100%;
 }
 
 .actividad{
@@ -416,7 +427,7 @@ form.buscador button:hover {
     visibility: visible;
   }
 
-.textcaja .popuptext{
+.popuptext{
     width: 700px;
     height: 550px;
     position: fixed;
@@ -427,8 +438,9 @@ form.buscador button:hover {
     background-image: url("../IMG/fondoActividad.PNG");
     background-color: white;
     border: 2px solid black;
+    font-size: 150%;
 }
-.textcaja .show {
+.show {
     visibility: visible;
     cursor: default;
     animation: fadeIn 0.4s;

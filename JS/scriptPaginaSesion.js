@@ -90,33 +90,6 @@ function mostrarNotificaciones() {
     }
 }
 
-function añadirActividad(columna) {
-    var popUpFiltros = document.getElementById("popUpFiltros");
-    if(popUpFiltros.style.visibility == "visible"){
-        cerrarFiltros();
-    }
-    var titulo = prompt("Introduzca la actividad", "Spinning");
-    var foto = prompt("Introduzca la foto", "https://i.blogs.es/dc3961/istock-918931148/450_1000.jpg");
-    var descripcion = prompt("Introduzca la descripcion de la nueva actividad", "No se que es esto.");
-    if (titulo == "" || titulo == null || descripcion == "" || descripcion == null) {
-        alert("El titulo y la descripcion son obligatorio");
-    }
-    else {
-        var cajaGrande = document.getElementById("columnaPrincipal" + columna);
-        //var cajaGrande = document.getElementById("arrastrar" + nombre_columna);
-
-        var button = document.getElementById("añadir" + columna);
-        button.remove();
-        
-        var actividad = document.createElement("div");
-        actividad.setAttribute("id", "actividad" + titulo);
-        actividad.setAttribute("class", "actividad");
-        cajaGrande.appendChild(actividad);
-
-        cajaGrande.appendChild(button);
-    }
-}
-
 function cerrarSesion(){
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -130,7 +103,6 @@ function abrirTablon(){
 }
 
 var variable;
-var cajaExtra; /*Se usa para añadir cajas*/
 function openpopup(a) {
     var i = 1;
     while(i<10){
