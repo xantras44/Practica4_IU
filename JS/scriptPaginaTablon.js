@@ -42,6 +42,15 @@ function cerrarMenu() {
     menuPrincipal.style.visibility="visible";
 }
 
+
+function colorMiga(numero) {
+    document.getElementById("miga" + numero).style.color = "rgb(100, 88, 214)";
+}
+
+function volverMiga(numero) {
+    document.getElementById("miga" + numero).style.color = "white";
+}
+
 function mostrarFiltros() {
     var filtro = document.getElementById("filtro");
     if(popUpFiltros.style.visibility == "visible"){
