@@ -289,9 +289,11 @@ function mostrarOpcionesCategoria(numCategoria) {
 }
 
 function archivarCategoria(numCategoria) {
-    var categoria = document.getElementById("categoria" + numCategoria);
-    padre = categoria.parentNode;
-    padre.removeChild(categoria);
+    if(confirm("¿Estás seguro?")) {
+        var categoria = document.getElementById("categoria" + numCategoria);
+        padre = categoria.parentNode;
+        padre.removeChild(categoria);
+    }
 }
 
 function añadirActividad(numCategoria) {
