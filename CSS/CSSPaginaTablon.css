@@ -407,6 +407,22 @@ form.buscador button:hover {
     opacity: 100%;
 }
 
+.popUpOpcionesCategoria {
+    width: 20%;
+    height: auto;
+    margin-top: 0.3%;
+    margin-left: 58%;
+    padding: 1%;
+    background-color: red;
+    position: absolute;
+    visibility: hidden;
+}
+
+.opcionCategoria {
+    background-color: green;
+    cursor: pointer;
+}
+
 .actividad{
     background-image: url("../IMG/fondoActividad.PNG");
     width: 40%;
