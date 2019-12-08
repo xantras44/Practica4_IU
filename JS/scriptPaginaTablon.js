@@ -396,12 +396,12 @@ function añadirCategoria(){
             var opcionCategoria2 = document.createElement("div");
             opcionCategoria2.setAttribute("class", "opcionCategoria");
             opcionCategoria2.setAttribute("onclick", "añadirActividad('" + numCategoria + "')")
-            opcionCategoria2.innerHTML = "Añadir categoria";
+            opcionCategoria2.innerHTML = "Añadir actividad";
             popUpOpcionesCategoria.appendChild(opcionCategoria2);
             var clear = document.createElement("div");
             clear.setAttribute("class", "clear");
             popUpOpcionesCategoria.appendChild(clear);
-            window.alert("Se ha creado correctamente")
+            window.alert("Se ha creado correctamente la categoria" + numCategoria)
         }
     }
 }
