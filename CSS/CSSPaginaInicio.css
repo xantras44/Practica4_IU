@@ -1,10 +1,8 @@
-/*Comentario random*/
 #Body {
     margin: 0px 0px 0px 0px;
     background-attachment: fixed;
     width: 100%;
 }
-/*Comentario random de Iván pa ver si va jeje salu2 gente jaja*/
 #cajaCabecera {
     width: 100%;
     height: 100px;
@@ -198,18 +196,15 @@
     cursor: default;
 }
 
-#cerrarRegistro {
-    width: 100%;
-    height: 100%;
-}
-
-#cerrarRegistro img {
-    width: 7%;
+.cerrarFormulario{
+    width: 5%;
     height: auto;
-    /*float: right;*/
-    margin-left: 82%;
+    float: right;
     cursor: pointer;
-    position: absolute ;
+}
+.cerrarFormulario img {
+    width: 100%;
+    height: auto;
 }
 
 .legend {
@@ -255,18 +250,6 @@
     color: rgb(69,140,199);
 }
 
-#cerrarRegistro {
-    width: 100%;
-    height: 100%;
-    
-}
-
-#cerrarRegistro img {
-    width: 7%;
-    height: 7%;
-    float: right;
-    cursor: pointer;
-}
 @-webkit-keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
@@ -375,8 +358,4 @@ footer a img:hover{
 
 .clear {
     clear: both;
-}
-
-.estrellas{
-    width: 5%;
 }

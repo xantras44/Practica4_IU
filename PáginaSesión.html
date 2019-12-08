@@ -14,19 +14,19 @@
             <div id="cajaCerrarMenu2"></div>
             <div id="cajaMenu">
                 <div id="cajaMenu2">
-                    <div class="opcionMenu">
+                    <div class="opcionMenu" onclick="abrirPerfil()">
                         <img class="iconoOpcionMenu" src="IMG/perfil2.png">
-                        <div class="textoOpcionMenu">Mi perfil</div>
+                        <div class="textoOpcionMenu" id = "nombrePerfil"></div>
                     </div>
                     <div class="opcionMenu" onclick="abrirTablon()">
                         <img class="iconoOpcionMenu" src="IMG/tablon2.png">
                         <div class="textoOpcionMenu">Mi tablón de eventos</div>
                     </div>
-                    <div class="opcionMenu" onclick="">
+                    <div class="opcionMenu" id="colorNoticia" onclick="abrirNoticias()">
                         <img class="iconoOpcionMenu" src="IMG/noticias2.png">
                         <div class="textoOpcionMenu">Noticias</div>
                     </div>
-                    <div class="opcionMenu" onclick="">
+                    <div class="opcionMenu" onclick="verCampeonatos()">
                         <img class="iconoOpcionMenu" src="IMG/competicion3s.png">
                         <div class="textoOpcionMenu">Competiciones</div>
                     </div>
@@ -42,9 +42,45 @@
                 </div>
             </div>
             <div id="cajaCerrarMenu" onclick="cerrarMenu()"></div>
-            
+            <div id="cajaNoticias">
+                    <div class="noticiaMenu" onclick="Esportmaniacos()">
+                            <div class="textoNoticia"> Esportmaniacos</div>
+                        </div>
+                        <div class="noticiaMenu" onclick="LVP()">
+                            <div class="textoNoticia">LVP</div>
+                        </div>
+                        <div class="noticiaMenu" onclick="ESL()">
+                            <div class="textoNoticia">ESL</div>
+                        </div>
+
+            </div>
+            <div id="cajaPerfil" >
+                <div id="cerrarPerfil">
+                    <img src="IMG/cerrarcajainterna.png" onclick="cerrarPerfil()">
+                </div>
+                <img id="fotoPerfil" src="IMG/perfil2.png">
+                <div id="textoPerfilNombre">Nombre de usuario:</div>
+                <div id="textoPerfil"></div>
+                <div id="textoCambiado" contenteditable="true"></div>
+                <div id="editar">
+                    <img src="IMG/editar.png" onclick="editarNombre()">
+                    <span id="tooltiptextEditar">editar nombre</span>
+                </div>
+                <div id="tickVerde">
+                    <img src="IMG/tick.png" onclick="aceptarNombre()">
+                    <span id="tooltiptextAceptar">aceptar nombre</span>
+                </div>
+
+                <div id="tickRojo">
+                        <img src="IMG/cancelar.png" onclick="rechazarNombre()">
+                        <span id="tooltiptextRechazar">rechazar cambios</span>
+                </div>
+                
+                <div id="textoPerfilEmail"></div>
+            </div>
             <header>
-                <div class="Cabecera" onclick="cogerNombreUsuario()">
+                <div class="Cabecera">
+                    <div id="miga"><a href="PáginaSesión.html" class="elementosMiga" id="miga1" onmouseover="colorMiga(1)" onmouseout="volverMiga(1)">Página principal</a></div>
                     <div><img id="menuPrincipal" src="IMG/menu.png" onclick="abrirMenu()"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
                     <div id="filtro" onclick="mostrarFiltros()">Filtrar</div>
@@ -79,12 +115,12 @@
                 <div id="caja1" class="actividad">
                     <img class="imgcaja" src="IMG/cuartosLol.jpg">
                     <div class="textcaja">
-                        <p onclick="openpopup(1)">Cuartos de final del mundial en Vistalegre</p>
+                        <p class="titulo" onclick="openpopup(1)">Cuartos de final del mundial en Vistalegre</p>
                         <div class="popuptext"  id="popup1">
                             <div id="seccion1popup">
                                 <img id="imagen" src="IMG/cuartosLol.jpg">
                                 <p id="texto" contenteditable="true">Cuartos de final del mundial en Vistalegre</p>
-                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin</p>
+                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin.</p>
                                 <img id="centroPopup" src="IMG/igvsgrf.PNG">
                                 <div id="cerrar">
                                     <img src="IMG/cerrarcajainterna.png" onclick="closepopup(1)">
@@ -104,13 +140,20 @@
                                         <img class="icon" src="IMG/agregarusuario.png">
                                     </div> 
                                 </div>
+                            <div class="seccionEstrellas">
+                                <img class="estrellas" id="estrella1caja1" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(1, 'caja1')" onmouseout="volverEstrella(1, 'caja1')" onclick="valorar(1, 'caja1')">
+                                <img class="estrellas" id="estrella2caja1" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(2, 'caja1')" onmouseout="volverEstrella(2, 'caja1')" onclick="valorar(2, 'caja1')">
+                                <img class="estrellas" id="estrella3caja1" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(3, 'caja1')" onmouseout="volverEstrella(3, 'caja1')" onclick="valorar(3, 'caja1')">
+                                <img class="estrellas" id="estrella4caja1" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(4, 'caja1')" onmouseout="volverEstrella(4, 'caja1')" onclick="valorar(4, 'caja1')">
+                                <img class="estrellas" id="estrella5caja1" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(5, 'caja1')" onmouseout="volverEstrella(5, 'caja1')" onclick="valorar(5, 'caja1')">
+                            </div>
                             </div>
                             <div id="seccion2popup">
-                                <div id="chat">
-                                    <div id="escribir"></div>
-                                    <div id="icono3">
-                                        <img class="icon2" src="IMG/enviar.png">
-                                    </div>
+                                <div class="chat" id="chat1">
+                                    <div class="textoChat">IvAn9K: como no jueguen quiyana me piro</div>
+                                    <div class="textoChat">Moviditojvc99: Venga ya tío, otro yasuo 0/5 en ranked</div>
+                                    <div class="barraChat" id="barra1" p contenteditable="true"></div>
+                                    <div class="enviarChat" id="enviar1" onclick="cogerTexto(1)">Enviar</div>
                                 </div>
                             </div>       
                         </div>
@@ -128,17 +171,17 @@
                 <div id="caja2" class="actividad"> 
                     <img class="imgcaja" src="IMG/crlWest.png">
                     <div class="textcaja">
-                        <p onclick="openpopup(2)">Partido de la CRL West</p>
+                        <p class="titulo" onclick="openpopup(2)">Partido de la CRL West</p>
                         <div class="popuptext"  id="popup2">
                             <div id="seccion1popup">
                                 <img id="imagen" src="IMG/crlWest.png">
-                                <p id="texto" contenteditable="true">Cuartos de final del mundial en Vistalegre</p>
-                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin</p>
+                                <p id="texto" contenteditable="true">Partido de la CRL West</p>
+                                <p id="subtitulo">Team Queso se enfrenta a uno de sus rivales directos, el famosísimo Fnatic</p>
                                 <img id="centroPopup" src="IMG/fvstq.PNG">
                                 <div id="cerrar">
                                     <img src="IMG/cerrarcajainterna.png" onclick="closepopup(2)">
                                 </div> 
-                                <p class="fechahora" contenteditable="true">17/07/2020  21:00</p>
+                                <p class="fechahora" contenteditable="true">10/07/2020  20:30</p>
                                 <div id="espaciousuarios">
                                     <h6>Has compartido este evento con: </h6>
                                     <div class="icono2">
@@ -153,20 +196,26 @@
                                         <img class="icon" src="IMG/agregarusuario.png">
                                     </div> 
                                 </div>
+                                <div class="seccionEstrellas">
+                                    <img class="estrellas" id="estrella1caja2" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(1, 'caja2')" onmouseout="volverEstrella(1, 'caja2')" onclick="valorar(1, 'caja2')">
+                                    <img class="estrellas" id="estrella2caja2" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(2, 'caja2')" onmouseout="volverEstrella(2, 'caja2')" onclick="valorar(2, 'caja2')">
+                                    <img class="estrellas" id="estrella3caja2" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(3, 'caja2')" onmouseout="volverEstrella(3, 'caja2')" onclick="valorar(3, 'caja2')">
+                                    <img class="estrellas" id="estrella4caja2" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(4, 'caja2')" onmouseout="volverEstrella(4, 'caja2')" onclick="valorar(4, 'caja2')">
+                                    <img class="estrellas" id="estrella5caja2" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(5, 'caja2')" onmouseout="volverEstrella(5, 'caja2')" onclick="valorar(5, 'caja2')">
+                                </div>
                             </div>
                             <div id="seccion2popup">
-                                <div id="chat">
-                                    <div id="escribir"></div>
-                                    <div id="icono3">
-                                        <img class="icon2" src="IMG/enviar.png">
-                                    </div>
+                                <div class="chat" id="chat2">
+                                    <div class="textoChat">ManuelAA: desde que salió Hello Kitty online esté juego dejó de tener sentido, brrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr</div>
+                                    <div class="barraChat" id="barra2" p contenteditable="true"></div>
+                                    <div class="enviarChat" id="enviar2" onclick="cogerTexto(2)">Enviar</div>
                                 </div>
                             </div>       
                         </div>
                     </div>
                     <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(2)">
                     <img class="centroActividad" src="IMG/fvstq.PNG">
-                    <p class="pieActividad">17/07/2020  21:00</p>
+                    <p class="pieActividad">10/07/2020  20:30</p>
                     <p class="pieActividad">#CRLWEST</p>
                     <p class="pieActividad">#ClashRoyale</p>
                     <div class="icono">
@@ -177,17 +226,17 @@
                 <div id="caja3" class="actividad"> 
                     <img class="imgcaja" src="IMG/slo.jpg">
                     <div class="textcaja">
-                        <p onclick="openpopup(3)">Partido de la Superliga Orange</p>
+                        <p class="titulo" onclick="openpopup(3)">Partido de la Superliga Orange</p>
                         <div class="popuptext"  id="popup3">
                             <div id="seccion1popup">
                                 <img id="imagen" src="IMG/slo.jpg">
-                                <p id="texto" contenteditable="true">Cuartos de final del mundial en Vistalegre</p>
-                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin</p>
+                                <p id="texto" contenteditable="true">Partido de la Superliga Orange</p>
+                                <p id="subtitulo">Nueva jornada de la Superliga Orange, Movistar Riders contra Team Heretics</p>
                                 <img id="centroPopup" src="IMG/mrvsth.png">
                                 <div id="cerrar">
                                     <img src="IMG/cerrarcajainterna.png" onclick="closepopup(3)">
                                 </div> 
-                                <p class="fechahora" contenteditable="true">17/07/2020  21:00</p>
+                                <p class="fechahora" contenteditable="true">01/07/2020  18:00</p>
                                 <div id="espaciousuarios">
                                     <h6>Has compartido este evento con: </h6>
                                     <div class="icono2">
@@ -202,20 +251,27 @@
                                         <img class="icon" src="IMG/agregarusuario.png">
                                     </div> 
                                 </div>
+                                <div class="seccionEstrellas">
+                                    <img class="estrellas" id="estrella1caja3" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(1, 'caja3')" onmouseout="volverEstrella(1, 'caja3')" onclick="valorar(1, 'caja3')">
+                                    <img class="estrellas" id="estrella2caja3" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(2, 'caja3')" onmouseout="volverEstrella(2, 'caja3')" onclick="valorar(2, 'caja3')">
+                                    <img class="estrellas" id="estrella3caja3" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(3, 'caja3')" onmouseout="volverEstrella(3, 'caja3')" onclick="valorar(3, 'caja3')">
+                                    <img class="estrellas" id="estrella4caja3" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(4, 'caja3')" onmouseout="volverEstrella(4, 'caja3')" onclick="valorar(4, 'caja3')">
+                                    <img class="estrellas" id="estrella5caja3" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(5, 'caja3')" onmouseout="volverEstrella(5, 'caja3')" onclick="valorar(5, 'caja3')">
+                                </div>
                             </div>
                             <div id="seccion2popup">
-                                <div id="chat">
-                                    <div id="escribir"></div>
-                                    <div id="icono3">
-                                        <img class="icon2" src="IMG/enviar.png">
-                                    </div>
+                                <div class="chat" id="chat3">
+                                    <div class="textoChat">GK Rubo: Vamos peluquillas let's gooooo</div>
+                                    <div class="textoChat">GK PatakyHD: Y vuelvo a perder el gordete :3</div>
+                                    <div class="barraChat" id="barra3" p contenteditable="true"></div>
+                                    <div class="enviarChat" id="enviar3" onclick="cogerTexto(3)">Enviar</div>
                                 </div>
                             </div>       
                         </div>
                     </div>
                     <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(3)">
                     <img class="centroActividad" src="IMG/mrvsth.png">
-                    <p class="pieActividad">17/07/2020  21:00</p>
+                    <p class="pieActividad">01/07/2020  18:00</p>
                     <p class="pieActividad">#SLO</p>
                     <p class="pieActividad">#CSGO</p>
                     <div class="icono">
@@ -223,24 +279,23 @@
                         <span class="tooltiptext">Counter Strike</span>
                     </div>
                 </div>
-                <button class ="añadir" id ="añadirIzquierda" onclick="añadirActividad('Izquierda')"><strong>NUEVA ACTIVIDAD</strong></button>
             </div>
             <div id="columnaPrincipalDerecha">
                 <div class="tituloColumnaPrincipal">Te puede interesar</div>
                 <div id="caja4" class="actividad">
                     <img class="imgcaja" src="IMG/iberianCup.png">
                     <div class="textcaja">
-                        <p onclick="openpopup(4)">Partido de la Iberian Cup</p>
+                        <p class="titulo" onclick="openpopup(4)">Partido de la Iberian Cup</p>
                         <div class="popuptext"  id="popup4">
                             <div id="seccion1popup">
                                 <img id="imagen" src="IMG/iberianCup.png">
-                                <p id="texto" contenteditable="true">Cuartos de final del mundial en Vistalegre</p>
-                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin</p>
+                                <p id="texto" contenteditable="true">Partido de la Iberian Cup</p>
+                                <p id="subtitulo">El GIANTS de TheAntonio contra el MAD LIONS de Yoppa, el partido más esperado ha llegado</p>
                                 <img id="centroPopup" src="IMG/mlvsvg.PNG">
                                 <div id="cerrar">
                                     <img src="IMG/cerrarcajainterna.png" onclick="closepopup(4)">
                                 </div> 
-                                <p class="fechahora" contenteditable="true">17/07/2020  21:00</p>
+                                <p class="fechahora" contenteditable="true">05/08/2020  17:00</p>
                                 <div id="espaciousuarios">
                                     <h6>Has compartido este evento con: </h6>
                                     <div class="icono2">
@@ -255,20 +310,27 @@
                                         <img class="icon" src="IMG/agregarusuario.png">
                                     </div> 
                                 </div>
+                                <div class="seccionEstrellas">
+                                    <img class="estrellas" id="estrella1caja4" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(1, 'caja4')" onmouseout="volverEstrella(1, 'caja4')" onclick="valorar(1, 'caja4')">
+                                    <img class="estrellas" id="estrella2caja4" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(2, 'caja4')" onmouseout="volverEstrella(2, 'caja4')" onclick="valorar(2, 'caja4')">
+                                    <img class="estrellas" id="estrella3caja4" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(3, 'caja4')" onmouseout="volverEstrella(3, 'caja4')" onclick="valorar(3, 'caja4')">
+                                    <img class="estrellas" id="estrella4caja4" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(4, 'caja4')" onmouseout="volverEstrella(4, 'caja4')" onclick="valorar(4, 'caja4')">
+                                    <img class="estrellas" id="estrella5caja4" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(5, 'caja4')" onmouseout="volverEstrella(5, 'caja4')" onclick="valorar(5, 'caja4')">
+                                </div>
                             </div>
                             <div id="seccion2popup">
-                                <div id="chat">
-                                    <div id="escribir"></div>
-                                    <div id="icono3">
-                                        <img class="icon2" src="IMG/enviar.png">
-                                    </div>
+                                <div class="chat" id="chat4">
+                                    <div class="textoChat">El Socialismo: No vuelvo a jugar a este juego macho</div>
+                                    <div class="textoChat" id="aqui">alexdioxo: Kha'zix</div>
+                                    <div class="barraChat" id="barra4" p contenteditable="true"></div>
+                                    <div class="enviarChat" id="enviar4" onclick="cogerTexto(4)">Enviar</div>
                                 </div>
                             </div>       
                         </div>
                     </div>
                     <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(4)">
                     <img class="centroActividad" src="IMG/mlvsvg.PNG">
-                    <p class="pieActividad">17/07/2020  21:00</p>
+                    <p class="pieActividad">05/08/2020  17:00</p>
                     <p class="pieActividad">#IberianCUP</p>
                     <p class="pieActividad">#LOL</p>
                     <div class="icono">
@@ -280,13 +342,13 @@
                 <div id="caja5" class="actividad">
                     <img class="imgcaja" src="IMG/cod.jpeg">
                     <div class="textcaja">
-                        <p onclick="openpopup(5)">Torneo 2 vs 2 de COD</p>
+                        <p class="titulo" onclick="openpopup(5)">Torneo 2 vs 2 de COD</p>
                         <div class="popuptext"  id="popup5">
                             <div id="seccion1popup">
                                 <img id="imagen" src="IMG/cod.jpeg">
-                                <p id="texto" contenteditable="true">Cuartos de final del mundial en Vistalegre</p>
-                                <p id="subtitulo">Partido emocionante entre el actual compeón del Mundo Invictus Gaming y Griffin</p>
-                                <img id="centroPopup" src="IMG/mlvsvg.PNG">
+                                <p id="texto" contenteditable="true">Torneo 2 vs 2 de COD</p>
+                                <p id="subtitulo">Torneo abierto de Call of Duty, plazas limitadas. ¡Apúntate ya!</p>
+                                <img id="centroPopup" src="IMG/arma2.png">
                                 <div id="cerrar">
                                     <img src="IMG/cerrarcajainterna.png" onclick="closepopup(5)">
                                 </div> 
@@ -305,13 +367,20 @@
                                         <img class="icon" src="IMG/agregarusuario.png">
                                     </div> 
                                 </div>
+                                <div class="seccionEstrellas">
+                                    <img class="estrellas" id="estrella1caja5" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(1, 'caja5')" onmouseout="volverEstrella(1, 'caja5')" onclick="valorar(1, 'caja5')">
+                                    <img class="estrellas" id="estrella2caja5" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(2, 'caja5')" onmouseout="volverEstrella(2, 'caja5')" onclick="valorar(2, 'caja5')">
+                                    <img class="estrellas" id="estrella3caja5" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(3, 'caja5')" onmouseout="volverEstrella(3, 'caja5')" onclick="valorar(3, 'caja5')">
+                                    <img class="estrellas" id="estrella4caja5" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(4, 'caja5')" onmouseout="volverEstrella(4, 'caja5')" onclick="valorar(4, 'caja5')">
+                                    <img class="estrellas" id="estrella5caja5" src="IMG/estrellaVacia.png" onmouseover="cambiarEstrella(5, 'caja5')" onmouseout="volverEstrella(5, 'caja5')" onclick="valorar(5, 'caja5')">
+                                </div>
                             </div>
                             <div id="seccion2popup">
-                                <div id="chat">
-                                    <div id="escribir"></div>
-                                    <div id="icono3">
-                                        <img class="icon2" src="IMG/enviar.png">
-                                    </div>
+                                <div class="chat" id="chat5">
+                                    <div class="textoChat">Willyrex: Ey muy buenas a todos</div>
+                                    <div class="textoChat">ElRubius: Muy buenas criaturitas del señor</div>
+                                    <div class="barraChat" id="barra5" p contenteditable="true"></div>
+                                    <div class="enviarChat" id="enviar5" onclick="cogerTexto(5)">Enviar</div>
                                 </div>
                             </div>       
                         </div>
@@ -326,87 +395,6 @@
                         <img src="IMG/codLogo.png">
                         <span class="tooltiptext">Call of Duty</span>
                     </div>
-                </div>
-                <button class ="añadir" id ="añadirDerecha" onclick="añadirActividad('Derecha')"><strong>NUEVA ACTIVIDAD</strong></button>
-            </div>
-            <div id="miTablon">
-                <div id="botonAñadirCategoria">
-                    <img src="IMG/mas.png">
-                    <div>Añadir categoría</div>
-                </div>
-                <div class="categoria">
-                    <div>Eventos creados por mi</div>
-                    <img class="opcionesCaja" src="IMG/3Puntos.png">
-                    <div class="actividad">
-                        <img class="imgcaja" src="IMG/cod.jpeg">
-                        <div class="textcaja">
-                            <p class="titulo" onclick="openpopup(3)">Torneo 2 vs 2 de COD</p>
-                            <p>Plazas libre: 16</p>
-                            <p>Premio económico: 150 €</p>
-                        </div>
-                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="abrirMenu()">
-                        <p class="pieActividad">17/07/2020  21:00</p>
-                        <p class="pieActividad">#CD</p>
-                        <p class="pieActividad">#MW</p>
-                        <div class="icono">
-                            <img src="IMG/codLogo.png">
-                            <span class="tooltiptext">Call of Duty</span>
-                        </div>
-                    </div>
-                    <div class="actividad">
-                        <img class="imgcaja" src="IMG/iberianCup.png">
-                        <div class="textcaja">
-                            <p class="titulo" onclick="openpopup(3)">Partido de la Iberian Cup</p>
-                        </div>
-                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(1)">
-                        <img class="centroActividad" src="IMG/mlvsvg.PNG">
-                        <p class="pieActividad">17/07/2020  21:00</p>
-                        <p class="pieActividad">#IberianCUP</p>
-                        <p class="pieActividad">#LOL</p>
-                        <div class="icono">
-                            <img src="IMG/logoLol.png">
-                            <span class="tooltiptext">LOL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="categoria">
-                    <div>Participaciones</div>
-                    <img class="opcionesCaja" src="IMG/3Puntos.png">
-                    <div class="actividad">
-                        <img class="imgcaja" src="IMG/cod.jpeg">
-                        <div class="textcaja">
-                            <p class="titulo" onclick="openpopup(3)">Torneo 2 vs 2 de COD</p>
-                            <p>Plazas libre: 16</p>
-                            <p>Premio económico: 150 €</p>
-                        </div>
-                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(1)">
-                        <p class="pieActividad">17/07/2020  21:00</p>
-                        <p class="pieActividad">#CD</p>
-                        <p class="pieActividad">#MW</p>
-                        <div class="icono">
-                            <img src="IMG/codLogo.png">
-                            <span class="tooltiptext">Call of Duty</span>
-                        </div>
-                    </div>
-                    <div class="actividad">
-                        <img class="imgcaja" src="IMG/iberianCup.png">
-                        <div class="textcaja">
-                            <p class="titulo" onclick="openpopup(3)">Partido de la Iberian Cup</p>
-                        </div>
-                        <img class="cierre" src="IMG/cerrarcajainterna.png" onclick="closebox(1)">
-                        <img class="centroActividad" src="IMG/mlvsvg.PNG">
-                        <p class="pieActividad">17/07/2020  21:00</p>
-                        <p class="pieActividad">#IberianCUP</p>
-                        <p class="pieActividad">#LOL</p>
-                        <div class="icono">
-                            <img src="IMG/logoLol.png">
-                            <span class="tooltiptext">LOL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="categoria">
-                        <div>Mis intereses</div>
-                        <img class="opcionesCaja" src="IMG/3Puntos.png">
                 </div>
             </div>
             <footer>

@@ -68,6 +68,10 @@ function buscarCookie() {
             if (contraseña == document.forms["formularioIniciarSesion"]["contraseña"].value) {
                 alert("Has iniciado sesion.");
                 emails = email;
+                var nombreUser = getCookie("nombreUsuario" + numeroCont);
+                localStorage.setItem("Usuario", nombreUser);
+                var email2 = getCookie("email" + numeroCont);
+                localStorage.setItem("email", email2);
                 location.href ="PáginaSesión.html";
             }
             else{
@@ -131,45 +135,4 @@ function comprobarCookie() {
         document.forms["formularioIniciarSesion"]["email"].value = "";
         document.forms["formularioIniciarSesion"]["contraseña"].value = "";
     //}
-}
-
-function cambiarEstrella(numero, caja){
-        if(document.getElementById("estrella" + numero + caja) != null){
-            while (numero != 0){
-            document.getElementById("estrella" + numero + caja).src="IMG/estrellaRellena.png";
-            numero--;
-            }
-        }
-}
-
-function volverEstrella(numero, caja){
-        if(document.getElementById("estrella" + numero + caja) != null){
-            while(numero != 0){
-            document.getElementById("estrella" + numero + caja).src="IMG/estrellaVacia.png";
-            numero--;
-            }
-        }
-}
-
-function valorar(numero, caja){
-    
-        if (document.getElementById("estrellaAcabada" + numero + caja) != null){
-            numero++;
-            while(numero != 6){
-                document.getElementById("estrellaAcabada" + numero + caja).src="IMG/estrellaVacia.png";
-                document.getElementById("estrellaAcabada" + numero + caja).className="estrellas";
-                document.getElementById("estrellaAcabada" + numero + caja).id="estrella" + numero + caja;
-                numero++;
-            }
-        }
-
-        if (document.getElementById("estrella" + numero + caja) != null){
-            while(numero != 0){
-            document.getElementById("estrella" + numero + caja).src="IMG/estrellaRellena.png";
-            document.getElementById("estrella" + numero + caja).className="estrellas";
-            document.getElementById("estrella" + numero + caja).id="estrellaAcabada" + numero + caja;
-            numero--;
-            }
-        }
-   
 }
