@@ -358,7 +358,7 @@ form.buscador button:hover {
     font-size: 130%;
     color: white;
     border: 1px solid white;
-    background-color: black;
+    background-image:url("../IMG/fondoCategoria.PNG") ;
     overflow: hidden;
 }
 
