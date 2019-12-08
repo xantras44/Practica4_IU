@@ -1,12 +1,12 @@
 function abrirMenu() {
-    var popUpFiltros = document.getElementById("popUpFiltros");
     if(localStorage.getItem("Usuario") != null){
         var nombreUsuario = localStorage.getItem("Usuario");
         document.getElementById("nombrePerfil").textContent = nombreUsuario;
-        }
+    }
     else{
         document.getElementById("nombrePerfil").textContent = "Mi perfil";   
-        }
+    }
+    var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
         cerrarFiltros();
     }
@@ -83,19 +83,23 @@ function ponerAZ(){
 }
 
 function mostrarNotificaciones() {
-    var popUpFiltros = document.getElementById("popUpFiltros");
-    if(popUpFiltros.style.visibility == "visible"){
-        cerrarFiltros();
-    }
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
     if(popUpNotificaciones.style.visibility == "visible"){
         popUpNotificaciones.style.visibility="hidden";
+        popUpNotificaciones.style.animation="slideCerrarInv";
+        popUpNotificaciones.style.animationDuration="0.5s";
     }
     else{
         popUpNotificaciones.style.visibility="visible";
+        popUpNotificaciones.style.animation="slideInv";
+        popUpNotificaciones.style.animationDuration="0.5s";
         imagen = document.getElementById("numeroNotificaciones");
         padre = imagen.parentNode;
         padre.removeChild(imagen);
+    }
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
     }
 }
 
