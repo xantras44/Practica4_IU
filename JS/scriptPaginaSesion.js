@@ -149,10 +149,51 @@ function abrirPerfil(){
     else{
             document.getElementById("textoPerfilEmail").textContent = "email: " + "Mi email";
         }
+    document.getElementById("textoPerfil").style.visibility = "visible";
+    document.getElementById("editar").style.visibility = "visible";
 }
 
 function cerrarPerfil(){
+    if(document.getElementById("editar").style.visibility == "visible"){
+        document.getElementById("editar").style.visibility = "hidden";
+    }
+    if(document.getElementById("tickVerde").style.visibility == "visible"){
+        document.getElementById("tickVerde").style.visibility = "hidden";
+    }
+    if(document.getElementById("tickRojo").style.visibility == "visible"){
+        document.getElementById("tickRojo").style.visibility = "hidden";
+    }
+    if(document.getElementById("textoPerfil").style.visibility == "visible"){
+        document.getElementById("textoPerfil").style.visibility = "hidden";
+    }
+    if(document.getElementById("textoCambiado").style.visibility == "visible"){
+        document.getElementById("textoCambiado").style.visibility = "hidden";
+    }
     document.getElementById("cajaPerfil").style.visibility = "hidden";
+}
+
+function abrirOpcionesFoto(){
+    cerrarPerfil();
+    document.getElementById("cambioFoto").style.visibility = "visible";
+}
+
+function cambiarFoto(numero){
+    document.getElementById("fotoPerfil").src = "IMG/opcionFoto" + numero + ".jpg";
+    document.getElementById("fotoPerfil").style.height = "40%";   
+    document.getElementById("cambioFoto").style.visibility = "hidden";
+    document.getElementById("fotoMenu").src = "IMG/opcionFoto" + numero + ".jpg";
+    document.getElementById("fotoMenu").style.width = "12%";
+    abrirPerfil();
+}
+
+function cerrarOpciones(){
+    document.getElementById("editar").style.visibility = "visible";
+    document.getElementById("tickVerde").style.visibility = "hidden";
+    document.getElementById("tickRojo").style.visibility = "hidden";
+    document.getElementById("textoPerfil").style.visibility = "visible";
+    document.getElementById("textoCambiado").style.visibility = "hidden";
+    document.getElementById("cajaPerfil").style.visibility = "visible";
+    document.getElementById("cambioFoto").style.visibility = "hidden";
 }
 
 function editarNombre(){

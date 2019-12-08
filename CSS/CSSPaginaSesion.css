@@ -285,6 +285,53 @@ form.buscador button:hover {
     color: white;
 }
 
+#cambioFoto{
+    width: 50%;
+    height: 500px;
+    margin-left: 0%;
+    position: fixed;
+    visibility: hidden;
+    background-color: white;
+    background-image: url("../IMG/fondoPerfil2.jpg");
+}
+
+.opcionesFoto{
+    width: 28%;
+    height: 180px;
+}
+
+#opcion1{
+    margin-left: 7%;
+    margin-top: 5.5%;
+}
+
+#opcion4{
+    margin-left: 20.5%;
+    margin-top: 4.5%;
+}
+#opcion5{
+    margin-left: 0.5%;
+    margin-top: 4.5%;
+}
+
+#textoOpciones{
+    margin-left: 35%;
+    font-size: 20px;
+    margin-top: 1%;
+}
+
+#cerrarOpciones{
+    width: 100%;
+    position: fixed;
+    margin-left: 47.5%;
+    margin-top: -34.05%;
+    cursor: pointer;
+}
+
+#cerrarOpciones img{
+    width: 2%;
+}
+
 #cajaPerfil{
     width: 50%;
     height: 500px;
@@ -313,7 +360,9 @@ form.buscador button:hover {
     margin-top: 2%;
     float: left;
     position: fixed;
+    width: 20%;
 }
+
 
 #textoPerfilNombre{
     font-size: 25px;
@@ -345,8 +394,8 @@ form.buscador button:hover {
 
 #tickVerde{
     width: 100%;
-    margin-left: 35%;
-    margin-top: 20%;
+    margin-left: 37%;
+    margin-top: 21.8%;
     float: left;
     position: fixed;
     cursor: pointer;
@@ -375,8 +424,8 @@ form.buscador button:hover {
 
   #tickRojo{
     width: 100%;
-    margin-left: 40%;
-    margin-top: 20.2%;
+    margin-left: 42%;
+    margin-top: 22%;
     float: left;
     position: fixed;
     cursor: pointer;
@@ -406,7 +455,7 @@ form.buscador button:hover {
 #editar{
     width: 100%;
     margin-left: 40%;
-    margin-top: 20%;
+    margin-top: 21.8%;
     float: left;
     position: fixed;
     cursor: pointer;

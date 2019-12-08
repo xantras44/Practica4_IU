@@ -15,7 +15,7 @@
             <div id="cajaMenu">
                 <div id="cajaMenu2">
                     <div class="opcionMenu" onclick="abrirPerfil()">
-                        <img class="iconoOpcionMenu" src="IMG/perfil2.png">
+                        <img class="iconoOpcionMenu" id="fotoMenu" src="IMG/perfil2.png">
                         <div class="textoOpcionMenu" id = "nombrePerfil"></div>
                     </div>
                     <div class="opcionMenu" onclick="abrirTablon()">
@@ -55,10 +55,21 @@
 
             </div>
             <div id="cajaPerfil" >
+                    <div id="cambioFoto">
+                            <div id="textoOpciones">Elige la nueva foto de perfil</div>
+                            <img class="opcionesFoto" id="opcion1" src="IMG/opcionFoto1.jpg" onclick="cambiarFoto(1)">
+                            <img class="opcionesFoto" id="opcion2" src="IMG/opcionFoto2.jpg" onclick="cambiarFoto(2)">
+                            <img class="opcionesFoto" id="opcion3" src="IMG/opcionFoto3.jpg" onclick="cambiarFoto(3)">
+                            <img class="opcionesFoto" id="opcion4" src="IMG/opcionFoto4.jpg" onclick="cambiarFoto(4)">
+                            <img class="opcionesFoto" id="opcion5" src="IMG/opcionFoto5.jpg" onclick="cambiarFoto(5)">
+                            <div id="cerrarOpciones">
+                                    <img src="IMG/cerrarcajainterna.png" onclick="cerrarOpciones()">
+                                </div>
+                        </div>
                 <div id="cerrarPerfil">
                     <img src="IMG/cerrarcajainterna.png" onclick="cerrarPerfil()">
                 </div>
-                <img id="fotoPerfil" src="IMG/perfil2.png">
+                <img id="fotoPerfil" src="IMG/perfil2.png" onclick="abrirOpcionesFoto()">
                 <div id="textoPerfilNombre">Nombre de usuario:</div>
                 <div id="textoPerfil"></div>
                 <div id="textoCambiado" contenteditable="true"></div>
