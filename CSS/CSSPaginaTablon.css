@@ -408,19 +408,29 @@ form.buscador button:hover {
 }
 
 .popUpOpcionesCategoria {
-    width: 20%;
+    width: 15%;
     height: auto;
     margin-top: 0.3%;
-    margin-left: 58%;
-    padding: 1%;
-    background-color: red;
+    margin-left: 65%;
+    background-color: rgb(48, 48, 48);
+    color: black;
     position: absolute;
     visibility: hidden;
 }
 
 .opcionCategoria {
-    background-color: green;
+    margin: 1%;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(201, 201, 201);
+    border: 0.5px solid gray;
     cursor: pointer;
+}
+
+.opcionCategoria:hover {
+    background-color: rgb(56, 56, 56);
+    border: 0.5px solid rgb(209, 209, 209);
+    color: white;
 }
 
 .actividad{
@@ -441,7 +451,7 @@ form.buscador button:hover {
     float: left;
 }
 
-.textcaja{
+.textCaja{
     width: 50%;
     height: 46%;
     font-size: 115%;
@@ -453,7 +463,7 @@ form.buscador button:hover {
     float: left;
     color: rgb(0, 0, 0);
 }
-.textcaja .titulo{
+.textCaja .titulo{
     cursor: pointer;
 }
 

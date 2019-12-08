@@ -275,14 +275,17 @@ function añadirCategoria(){
             window.alert("Se ha creado correctamente")
         }
     }
-    else{
-    }
     
 }
 
 function mostrarOpcionesCategoria(numCategoria) {
     var popUpOpcionesCategoria = document.getElementById("popUpOpcionesCategoria" + numCategoria);
-    popUpOpcionesCategoria.style.visibility = "visible";
+    if(popUpOpcionesCategoria.style.visibility == "visible"){
+        popUpOpcionesCategoria.style.visibility = "hidden";
+    }
+    else {
+        popUpOpcionesCategoria.style.visibility = "visible";
+    }
 }
 
 function archivarCategoria(numCategoria) {
@@ -291,3 +294,87 @@ function archivarCategoria(numCategoria) {
     padre.removeChild(categoria);
 }
 
+function añadirActividad(numCategoria) {
+    var titulo = prompt("Introduzca la actividad", "Multijugador GTA V");
+    var foto = prompt("Introduzca la foto", "https://s1.gaming-cdn.com/images/products/186/271x377/grand-theft-auto-v-cover.jpg");
+    var plazasLibres = prompt("Introduzca las plazas disponibles para actividad", "22");
+    var premio = prompt("Introduzca el premio para el ganador", "200€");
+    var icono = prompt("Introduzca el icono del juego", "IMG/codLogo.png");
+    var hastag1 = prompt("Introduzca un hastag", "#MD");
+    var hastag2 = prompt("Introduzca otro hastag", "#LOL");
+    var juego = prompt("Introduzca el juego de la nueva actividad", "Desconocido");
+    if (titulo == "" || titulo == null || plazasLibres == "" || plazasLibres == null) {
+        alert("El titulo y la descripción es obligatorio");
+    }
+    else {
+        var cajaGrande = document.getElementById("categoria" + numCategoria);
+        var numActividad = 1
+        while(document.getElementById("categoria" + numActividad) != null){
+            numActividad = numActividad + 1;
+        }
+        var caja = document.createElement("div");
+        caja.setAttribute("id", "caja" + numActividad);
+        caja.setAttribute("class", "actividad");
+        cajaGrande.appendChild(caja);
+        
+        var imgCaja = document.createElement("img");
+        imgCaja.setAttribute("class", "imgcaja");
+        imgCaja.setAttribute("src", foto);
+        caja.appendChild(imgCaja);
+        
+        var textCaja = document.createElement("div");
+        textCaja.setAttribute("class", "textCaja");
+        caja.appendChild(textCaja);
+        
+        var parrafoTitulo = document.createElement("p");
+        parrafoTitulo.setAttribute("class", "titulo");
+        parrafoTitulo.innerText = titulo;
+        parrafoTitulo.setAttribute("onclick", "openpopup('" + 1 + "')");
+        textCaja.appendChild(parrafoTitulo);
+        
+        var parafoPlazasLibres = document.createElement("p");
+        parafoPlazasLibres.innerText = "Plazas libres: " + plazasLibres;
+        textCaja.appendChild(parafoPlazasLibres);
+        
+        var parafoPremio = document.createElement("p");
+        parafoPremio.innerText = "Premio: " + premio;
+        textCaja.appendChild(parafoPremio);
+        
+        var imgCierre = document.createElement("img");
+        imgCierre.setAttribute("class", "cierre");
+        imgCierre.setAttribute("src", "IMG/cerrarcajainterna.png");
+        imgCierre.setAttribute("onclick", "closebox('" + numActividad + "')")
+        caja.appendChild(imgCierre);
+        
+        var parafoPieActividad1 = document.createElement("p");
+        parafoPieActividad1.setAttribute("class", "pieActividad");
+        var date = new Date();
+        parafoPieActividad1.innerHTML = date.getDate() + "/" + (date.getMonth() +1) + "/" + date.getFullYear() + " " + date.getHours() + ":" + date.getMinutes();
+        caja.appendChild(parafoPieActividad1);
+        
+        var parafoPieActividad2 = document.createElement("p");
+        parafoPieActividad2.setAttribute("class", "pieActividad");
+        parafoPieActividad2.innerText = hastag1;
+        caja.appendChild(parafoPieActividad2);
+        
+        var parafoPieActividad3 = document.createElement("p");
+        parafoPieActividad3.setAttribute("class", "pieActividad");
+        parafoPieActividad3.innerText = hastag2;
+        caja.appendChild(parafoPieActividad3);
+        
+        var cajaIcono = document.createElement("div");
+        cajaIcono.setAttribute("class", "icono");
+        caja.appendChild(cajaIcono);
+        
+        var codLogo = document.createElement("img");
+        codLogo.setAttribute("src", icono);
+        cajaIcono.appendChild(codLogo);
+        
+        var tooltiptext = document.createElement("span");
+        tooltiptext.setAttribute("class", "tooltiptext");
+        tooltiptext.innerText = juego;
+        cajaIcono.appendChild(tooltiptext);
+
+        mostrarOpcionesCategoria(numCategoria);
+    }
+}
