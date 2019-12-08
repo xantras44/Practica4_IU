@@ -30,6 +30,10 @@ function cerrarMenu() {
     if(popUpFiltros.style.visibility == "visible"){
         cerrarFiltros();
     }
+    var cajaNoticias = document.getElementById("cajaNoticias")
+    if(cajaNoticias.style.visibility == "visible"){
+        cerrarNoticias();
+    }
     var cajaMenu = document.getElementById("cajaMenu");
     cajaMenu.style.animation="slideCerrar";
     cajaMenu.style.animationDuration="0.5s";
