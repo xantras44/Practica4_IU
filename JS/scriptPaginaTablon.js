@@ -115,6 +115,40 @@ function abrirTablon(){
     location.href ="paginaTablon.html";
 }
 
+function abrirNoticias(){
+    var cajaNoticias = document.getElementById("cajaNoticias");
+    if(cajaNoticias.style.visibility == "visible"){
+        cerrarNoticias();
+    }
+    else{
+    document.getElementById("colorNoticia").style.borderColor = "blue";
+    document.getElementById("cajaNoticias").style.visibility = "visible";
+    document.getElementById("cajaNoticias").style.zIndex = "2";
+    }
+}
+
+function Esportmaniacos(){
+    location.href = "https://www.esportmaniacos.com/";
+}
+
+function LVP(){
+    location.href = "https://www.lvp.es/";
+}
+
+function ESL(){
+    location.href = "https://play.eslgaming.com/spain";
+}
+
+function cerrarNoticias(){
+    var cerrarNoticias = document.getElementById("cajaNoticias");
+    document.getElementById("colorNoticia").style.borderColor = "";
+    cerrarNoticias.style.visibility="hidden";
+}
+
+function verCampeonatos(){
+    location.href = "https://esports.as.com/otros/Agenda-esports-torneos-competiciones-hoy_0_1102989697.html";
+}
+
 function openpopup(a) {
     var i = 1;
     while(i<10){
