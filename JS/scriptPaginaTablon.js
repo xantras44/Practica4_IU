@@ -306,11 +306,8 @@ function verCampeonatos(){
     location.href = "https://esports.as.com/otros/Agenda-esports-torneos-competiciones-hoy_0_1102989697.html";
 }
 
-<<<<<<< Updated upstream
 /*Funcion utilizada para abrir el popup de una actividad*/
-=======
 var variable;
->>>>>>> Stashed changes
 function openpopup(a) {
     var i = 1;
     while(i<10){
