@@ -388,18 +388,22 @@ function añadirCategoria(){
             popUpOpcionesCategoria.setAttribute("class", "popUpOpcionesCategoria");
             popUpOpcionesCategoria.setAttribute("onclick", "mostrarOpcionesCategoria('" + numCategoria + "')")
             nuevaCategoria.appendChild(popUpOpcionesCategoria);
-            var opcionCategoria = document.createElement("div");
-            opcionCategoria.setAttribute("class", "opcionCategoria");
-            opcionCategoria.setAttribute("onclick", "archivarCategoria('" + numCategoria + "')")
-            opcionCategoria.innerHTML = "Archivar";
-            popUpOpcionesCategoria.appendChild(opcionCategoria);
+            var opcionCategoria1 = document.createElement("div");
+            opcionCategoria1.setAttribute("class", "opcionCategoria");
+            opcionCategoria1.setAttribute("onclick", "archivarCategoria('" + numCategoria + "')")
+            opcionCategoria1.innerHTML = "Archivar";
+            popUpOpcionesCategoria.appendChild(opcionCategoria1);
+            var opcionCategoria2 = document.createElement("div");
+            opcionCategoria2.setAttribute("class", "opcionCategoria");
+            opcionCategoria2.setAttribute("onclick", "añadirActividad('" + numCategoria + "')")
+            opcionCategoria2.innerHTML = "Añadir categoria";
+            popUpOpcionesCategoria.appendChild(opcionCategoria2);
             var clear = document.createElement("div");
             clear.setAttribute("class", "clear");
             popUpOpcionesCategoria.appendChild(clear);
             window.alert("Se ha creado correctamente")
         }
     }
-    
 }
 
 function mostrarOpcionesCategoria(numCategoria) {
