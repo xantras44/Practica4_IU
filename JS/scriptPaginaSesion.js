@@ -25,6 +25,7 @@ function abrirMenu() {
     }
 }
 
+
 function cerrarMenu() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -111,6 +112,76 @@ function cerrarSesion(){
     location.href ="PáginaInicio.html";
 }
 
+function abrirPerfil(){
+    var cajaNoticias = document.getElementById("cajaNoticias");
+    if(cajaNoticias.style.visibility == "visible"){
+        cerrarNoticias();
+    }
+    var popUpFiltros = document.getElementById("popUpFiltros");
+    if(popUpFiltros.style.visibility == "visible"){
+        cerrarFiltros();
+    }
+    var cajaMenu = document.getElementById("cajaMenu");
+    cajaMenu.style.animation="slideCerrar";
+    cajaMenu.style.animationDuration="0.5s";
+    setTimeout(function(){cajaMenu.style.visibility="hidden"}, 500);
+    var cajaCerrarMenu = document.getElementById("cajaCerrarMenu");
+    cajaCerrarMenu.style.visibility= "hidden";
+    var cajaCerrarMenu2 = document.getElementById("cajaCerrarMenu2");
+    cajaCerrarMenu2.style.visibility= "hidden";
+    var menuPrincipal = document.getElementById("menuPrincipal");
+    menuPrincipal.style.visibility="visible";
+    document.getElementById("cajaPerfil").style.visibility = "visible";
+    if(localStorage.getItem("Usuario") != null){
+        var nombreUsuario = localStorage.getItem("Usuario");
+        document.getElementById("textoPerfil").textContent = nombreUsuario;
+        }
+    else{
+        document.getElementById("textoPerfil").textContent = "Mi usuario";   
+        }
+    if(localStorage.getItem("email") != null){
+            var email = localStorage.getItem("email");
+            document.getElementById("textoPerfilEmail").textContent = "email: " + email;
+        }
+    else{
+            document.getElementById("textoPerfilEmail").textContent = "email: " + "Mi email";
+        }
+}
+
+function cerrarPerfil(){
+    document.getElementById("cajaPerfil").style.visibility = "hidden";
+}
+
+function editarNombre(){
+    document.getElementById("editar").style.visibility = "hidden";
+    document.getElementById("tickVerde").style.visibility = "visible";
+    document.getElementById("tickRojo").style.visibility = "visible";
+    var aux = document.getElementById("textoPerfil").textContent;
+    document.getElementById("textoCambiado").textContent = aux;
+    document.getElementById("textoCambiado").style.color = "blue";
+    document.getElementById("textoPerfil").style.visibility = "hidden";
+    document.getElementById("textoCambiado").style.visibility = "visible";
+}
+
+function aceptarNombre(){
+    var aux = document.getElementById("textoCambiado").textContent;
+    document.getElementById("textoPerfil").textContent = aux;
+    document.getElementById("textoPerfil").style.visibility = "visible";
+    document.getElementById("textoCambiado").style.visibility = "hidden";
+    document.getElementById("editar").style.visibility = "visible";
+    document.getElementById("tickVerde").style.visibility = "hidden";
+    document.getElementById("tickRojo").style.visibility = "hidden";
+    localStorage.setItem("Usuario", aux);
+}
+
+function rechazarNombre(){
+    document.getElementById("textoPerfil").style.visibility = "visible";
+    document.getElementById("textoCambiado").style.visibility = "hidden";
+    document.getElementById("editar").style.visibility = "visible";
+    document.getElementById("tickVerde").style.visibility = "hidden";
+    document.getElementById("tickRojo").style.visibility = "hidden";
+}
+
 function abrirTablon(){
     location.href ="paginaTablon.html";
 }
@@ -143,6 +214,10 @@ function cerrarNoticias(){
     var cerrarNoticias = document.getElementById("cajaNoticias");
     document.getElementById("colorNoticia").style.borderColor = "";
     cerrarNoticias.style.visibility="hidden";
+}
+
+function verCampeonatos(){
+    location.href = "https://esports.as.com/otros/Agenda-esports-torneos-competiciones-hoy_0_1102989697.html";
 }
 
 var variable;

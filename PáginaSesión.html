@@ -14,7 +14,7 @@
             <div id="cajaCerrarMenu2"></div>
             <div id="cajaMenu">
                 <div id="cajaMenu2">
-                    <div class="opcionMenu">
+                    <div class="opcionMenu" onclick="abrirPerfil()">
                         <img class="iconoOpcionMenu" src="IMG/perfil2.png">
                         <div class="textoOpcionMenu" id = "nombrePerfil"></div>
                     </div>
@@ -26,7 +26,7 @@
                         <img class="iconoOpcionMenu" src="IMG/noticias2.png">
                         <div class="textoOpcionMenu">Noticias</div>
                     </div>
-                    <div class="opcionMenu" onclick="">
+                    <div class="opcionMenu" onclick="verCampeonatos()">
                         <img class="iconoOpcionMenu" src="IMG/competicion3s.png">
                         <div class="textoOpcionMenu">Competiciones</div>
                     </div>
@@ -53,6 +53,30 @@
                             <div class="textoNoticia">ESL</div>
                         </div>
 
+            </div>
+            <div id="cajaPerfil" >
+                <div id="cerrarPerfil">
+                    <img src="IMG/cerrarcajainterna.png" onclick="cerrarPerfil()">
+                </div>
+                <img id="fotoPerfil" src="IMG/perfil2.png">
+                <div id="textoPerfilNombre">Nombre de usuario:</div>
+                <div id="textoPerfil"></div>
+                <div id="textoCambiado" contenteditable="true"></div>
+                <div id="editar">
+                    <img src="IMG/editar.png" onclick="editarNombre()">
+                    <span id="tooltiptextEditar">editar nombre</span>
+                </div>
+                <div id="tickVerde">
+                    <img src="IMG/tick.png" onclick="aceptarNombre()">
+                    <span id="tooltiptextAceptar">aceptar nombre</span>
+                </div>
+
+                <div id="tickRojo">
+                        <img src="IMG/cancelar.png" onclick="rechazarNombre()">
+                        <span id="tooltiptextRechazar">rechazar cambios</span>
+                </div>
+                
+                <div id="textoPerfilEmail"></div>
             </div>
             <header>
                 <div class="Cabecera">

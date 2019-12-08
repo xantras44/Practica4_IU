@@ -275,6 +275,153 @@ form.buscador button:hover {
     color: white;
 }
 
+#cajaPerfil{
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    position: fixed;
+    margin-top: 10%;
+    visibility: hidden;
+    background-color: white;
+    background-image: url("../IMG/fondoPerfil2.jpg");
+}
+
+#cerrarPerfil{
+    width: 100%;
+    position: fixed;
+    margin-left: 47.5%;
+    margin-top: 0.5%;
+    cursor: pointer;
+}
+
+#cerrarPerfil img{
+    width: 2%;
+}
+
+#fotoPerfil{
+    margin-left: 16%;
+    margin-top: 2%;
+    float: left;
+    position: fixed;
+}
+
+#textoPerfilNombre{
+    font-size: 25px;
+    position: fixed;
+    margin-top: 25% ;
+    margin-left:2% ;
+}
+
+#textoPerfil{
+    font-size: 25px;
+    position: fixed;
+    margin-top: 25% ;
+    margin-left:17% ;
+}
+
+#textoCambiado{
+    font-size: 25px;
+    position: fixed;
+    margin-top: 25% ;
+    margin-left:17% ;
+}
+
+#textoPerfilEmail{
+    font-size: 25px;
+    position: fixed;
+    margin-top: 30% ;
+    margin-left:2% ;
+}
+
+#tickVerde{
+    width: 100%;
+    margin-left: 35%;
+    margin-top: 20%;
+    float: left;
+    position: fixed;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#tickVerde img{
+    width: 3%;
+}
+
+#tickVerde #tooltiptextAceptar {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    margin-left: -6%;
+    margin-top: -3%;
+  }
+#tickVerde:hover #tooltiptextAceptar{
+    visibility: visible;
+  }
+
+  #tickRojo{
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 20.2%;
+    float: left;
+    position: fixed;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+#tickRojo img{
+    width: 3%;
+}
+
+#tickRojo #tooltiptextRechazar {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    margin-left: -6%;
+    margin-top: -3%;
+  }
+#tickRojo:hover #tooltiptextRechazar{
+    visibility: visible;
+  }
+
+#editar{
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 20%;
+    float: left;
+    position: fixed;
+    cursor: pointer;
+}
+
+#editar img{
+    width: 3%;
+}
+
+#editar #tooltiptextEditar{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    margin-left: -6%;
+    margin-top: -3%;
+  }
+  #editar:hover #tooltiptextEditar{
+    visibility: visible;
+  }
+
 #cajaCerrarMenu2 {
     height: 800px;
     width: 35%;
