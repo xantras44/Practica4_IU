@@ -122,11 +122,13 @@ function abrirPoliticas(){
     document.getElementById("cajaPoliticas").style.zIndex = "3";
 }
 
+/*Funcion utilizada para cerrar la pagina de las politicas */
 function cerrarPoliticas(){
     document.getElementById("cajaPoliticas").style.zIndex = "1";
     document.getElementById("cajaPoliticas").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para abrir el perfil del usuario*/
 function abrirPerfil(){
     var cajaNoticias = document.getElementById("cajaNoticias");
     if(cajaNoticias.style.visibility == "visible"){
@@ -166,6 +168,7 @@ function abrirPerfil(){
     document.getElementById("editar").style.visibility = "visible";
 }
 
+/*Funcion utilizada para cerrar el perfil del usuario*/
 function cerrarPerfil(){
     if(document.getElementById("editar").style.visibility == "visible"){
         document.getElementById("editar").style.visibility = "hidden";
@@ -185,11 +188,13 @@ function cerrarPerfil(){
     document.getElementById("cajaPerfil").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para abrir el popup con las opciones para cambiar la foto de perfil*/
 function abrirOpcionesFoto(){
     cerrarPerfil();
     document.getElementById("cambioFoto").style.visibility = "visible";
 }
 
+/*Funcion utilizada para cambiar la foto de perfil*/
 function cambiarFoto(numero){
     document.getElementById("fotoPerfil").src = "IMG/opcionFoto" + numero + ".jpg";
     document.getElementById("fotoPerfil").style.height = "40%";   
@@ -199,6 +204,7 @@ function cambiarFoto(numero){
     abrirPerfil();
 }
 
+/*Funcion utilizada para poder cerrar el popup de cambio de foto de perfil si no se quiere cambiar*/
 function cerrarOpciones(){
     document.getElementById("editar").style.visibility = "visible";
     document.getElementById("tickVerde").style.visibility = "hidden";
@@ -209,6 +215,7 @@ function cerrarOpciones(){
     document.getElementById("cambioFoto").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para poder cambiar el nombre de usuario*/
 function editarNombre(){
     document.getElementById("editar").style.visibility = "hidden";
     document.getElementById("tickVerde").style.visibility = "visible";
@@ -220,6 +227,7 @@ function editarNombre(){
     document.getElementById("textoCambiado").style.visibility = "visible";
 }
 
+/*Funcion utilizada para aceptar el cambio a la hora de cambiar el nombre de usuario*/
 function aceptarNombre(){
     var aux = document.getElementById("textoCambiado").textContent;
     document.getElementById("textoPerfil").textContent = aux;
@@ -231,6 +239,7 @@ function aceptarNombre(){
     localStorage.setItem("Usuario", aux);
 }
 
+/*Funcion utilizada para rechazar el cambio a la hora de cambiar el nombre de usuario*/
 function rechazarNombre(){
     document.getElementById("textoPerfil").style.visibility = "visible";
     document.getElementById("textoCambiado").style.visibility = "hidden";
@@ -239,10 +248,12 @@ function rechazarNombre(){
     document.getElementById("tickRojo").style.visibility = "hidden";
 }
 
+/*Redirige a la pagina del tablon en la seccion "Mi tablon de eventos" del menu desplegable*/
 function abrirTablon(){
     location.href ="paginaTablon.html";
 }
 
+/*Funcion utilizada para que aparezcan las secciones de noticias*/
 function abrirNoticias(){
     var cajaNoticias = document.getElementById("cajaNoticias");
     if(cajaNoticias.style.visibility == "visible"){
@@ -255,28 +266,34 @@ function abrirNoticias(){
     }
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function Esportmaniacos(){
     location.href = "https://www.esportmaniacos.com/";
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function LVP(){
     location.href = "https://www.lvp.es/";
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function ESL(){
     location.href = "https://play.eslgaming.com/spain";
 }
 
+/*Funcion utilizada para que desaparezcan las secciones de noticias*/
 function cerrarNoticias(){
     var cerrarNoticias = document.getElementById("cajaNoticias");
     document.getElementById("colorNoticia").style.borderColor = "";
     cerrarNoticias.style.visibility="hidden";
 }
 
+/*Redirige a otra pagina en la seccion "Campeonatos" del menu desplegable*/
 function verCampeonatos(){
     location.href = "https://esports.as.com/otros/Agenda-esports-torneos-competiciones-hoy_0_1102989697.html";
 }
 
+/*Funcion utilizada para abrir el popup de una actividad*/
 function openpopup(a) {
     var i = 1;
     while(i<10){
@@ -286,12 +303,16 @@ function openpopup(a) {
     variable = document.getElementById("popup"+a);
     variable.classList.add("show");
 }
+
+/*Funcion utilizada para cerrar el popup de una actividad*/
 function closepopup(a){
     variable = document.getElementById("popup"+a);
     if(variable!=null){
         variable.classList.remove("show");
     }
 }
+
+/*Funcion utilizada para eliminar una actividad*/
 function closebox(a){
     if (window.confirm("¿Seguro que quieres borrar la caja?")) {
         variable = document.getElementById("caja"+a);
@@ -301,7 +322,7 @@ function closebox(a){
         variable.remove();
     } else {}
 }
-
+/*Funcion utilizada para que al pulsar enviar coja al usuario y coloque el mensaje en el chat enviado por ese usuario*/
 function cogerTexto(numero){
     var usuario = localStorage.getItem("Usuario");
     if (usuario != null){
@@ -318,7 +339,7 @@ function cogerTexto(numero){
     var contenedor = document.getElementById("chat" + numero);
     contenedor.insertBefore( texto, document.getElementById("barra" + numero));
   }
-
+  /*Funcion utilizada para que al pasar el raton por encima de una estrella no marcada se rellene junto con las anteriores*/
   function cambiarEstrella(numero, caja){
     if(document.getElementById("estrella" + numero + caja) != null){
         while (numero != 0){
@@ -327,7 +348,7 @@ function cogerTexto(numero){
         }
     }
 }
-
+/*Funcion utilizada para que al quitar el raton de una estrella no marcada se vacie tanto ella como las anteriores no marcadas*/
 function volverEstrella(numero, caja){
     if(document.getElementById("estrella" + numero + caja) != null){
         while(numero != 0){
@@ -337,6 +358,7 @@ function volverEstrella(numero, caja){
     }
 }
 
+/*Funcion utilizada para que al pulsar sobre una estrella se marquen tanto ella como las anteriores*/
 function valorar(numero, caja){
 
     if (document.getElementById("estrellaAcabada" + numero + caja) != null){
@@ -358,7 +380,7 @@ function valorar(numero, caja){
         }
     }
 }
-
+/*Funcion utilizada para crear categorias en el tablon*/
 function añadirCategoria(){
     var categoria;
     if(categoria = prompt("Introduzca el nombre de la categoria", "Mis eventos")){
@@ -405,7 +427,7 @@ function añadirCategoria(){
         }
     }
 }
-
+/*Funcion utilizada para abrir desplegable de las categorias*/
 function mostrarOpcionesCategoria(numCategoria) {
     var popUpOpcionesCategoria = document.getElementById("popUpOpcionesCategoria" + numCategoria);
     if(popUpOpcionesCategoria.style.visibility == "visible"){
@@ -415,7 +437,7 @@ function mostrarOpcionesCategoria(numCategoria) {
         popUpOpcionesCategoria.style.visibility = "visible";
     }
 }
-
+/*Funcion utilizada para archivar una categoria*/
 function archivarCategoria(numCategoria) {
     if(confirm("¿Estás seguro?")) {
         alert("Has archivado la categoria")
@@ -424,7 +446,7 @@ function archivarCategoria(numCategoria) {
         padre.removeChild(categoria);
     }
 }
-
+/*Funcion utilizada para añadir actividad a una categoria*/
 function añadirActividad(numCategoria) {
     var titulo = prompt("Introduzca el título de la actividad", "Multijugador GTA V");
     var foto = prompt("Introduzca la foto", "https://s1.gaming-cdn.com/images/products/186/271x377/grand-theft-auto-v-cover.jpg");
