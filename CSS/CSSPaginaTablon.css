@@ -8,7 +8,19 @@ Body {
     height: 100px;
     background-color: rgb(48, 48, 48);
     position: fixed;
-    z-index: 1;
+    z-index: 2;
+}
+
+#miga{
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: -28%;
+    color: white;
+    float: left;
+}
+
+.elementosMiga{
+    color: white;
 }
 
 #iconoCerrar{
@@ -407,7 +419,7 @@ form.buscador button:hover {
     width: 700px;
     height: 550px;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 5%;
     left: 25%;
     visibility: hidden;
@@ -597,35 +609,6 @@ form.buscador button:hover {
     float: right;
     margin-top: 5%;
 }
-
-footer{
-    height: 50px;
-    border: 2px solid white;
-    background-color: rgb(48, 48, 48);
-    text-align: center;
-    clear: both;
-}
-
-footer a img{
-    width: 3%;
-    height: 80%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0.3%;
-    transition: opacity 0.2s;
-}
-
-footer a img:hover{
-    opacity: 0.5;
-}
-
-#cajaFooter {
-    width: 100%;
-    height: 50px;
-    background-color: rgb(48, 48, 48);
-    color: white;
-}
-
 .clear {
     clear: both;
 }
