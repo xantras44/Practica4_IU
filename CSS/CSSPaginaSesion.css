@@ -12,6 +12,18 @@ Body {
     z-index: 1;
 }
 
+#miga{
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: -28%;
+    color: white;
+    float: left;
+}
+
+.elementosMiga{
+    color: white;
+}
+
 #iconoCerrar{
     float: right;
     width: 5%;
@@ -230,6 +242,39 @@ form.buscador button:hover {
     z-index: 1;
 }
 
+#cajaNoticias {
+    width: 25%;
+    height: 300px;
+    margin-left: 36%;
+    position: fixed;
+    visibility: hidden;
+    margin-top: 20%;
+}
+
+.noticiaMenu{
+    width: 100%;
+    height: 80px;
+    border-bottom: 6px solid grey;
+    cursor: pointer;
+    background-image: url("../IMG/fondoMenu2.png");
+    transition: border-color 0.5s; 
+}
+
+.noticiaMenu:hover{
+    border-color: blue;
+}
+
+.textoNoticia{
+    height: 50%;
+    width: auto;
+    float: left;
+    margin-top: 6%;
+    margin-left: 15%;
+    font-size: 150%;
+    text-decoration: none;
+    color: white;
+}
+
 #cajaCerrarMenu2 {
     height: 800px;
     width: 35%;
@@ -256,6 +301,7 @@ form.buscador button:hover {
 .opcionMenu:hover{
     border-color: blue;
 }
+
 
 .iconoOpcionMenu {
     height: 50px;

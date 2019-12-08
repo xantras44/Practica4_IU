@@ -22,7 +22,7 @@
                         <img class="iconoOpcionMenu" src="IMG/tablon2.png">
                         <div class="textoOpcionMenu">Mi tablón de eventos</div>
                     </div>
-                    <div class="opcionMenu" onclick="">
+                    <div class="opcionMenu" id="colorNoticia" onclick="abrirNoticias()">
                         <img class="iconoOpcionMenu" src="IMG/noticias2.png">
                         <div class="textoOpcionMenu">Noticias</div>
                     </div>
@@ -42,9 +42,21 @@
                 </div>
             </div>
             <div id="cajaCerrarMenu" onclick="cerrarMenu()"></div>
-            
+            <div id="cajaNoticias">
+                    <div class="noticiaMenu" onclick="Esportmaniacos()">
+                            <div class="textoNoticia"> Esportmaniacos</div>
+                        </div>
+                        <div class="noticiaMenu" onclick="LVP()">
+                            <div class="textoNoticia">LVP</div>
+                        </div>
+                        <div class="noticiaMenu" onclick="ESL()">
+                            <div class="textoNoticia">ESL</div>
+                        </div>
+
+            </div>
             <header>
                 <div class="Cabecera">
+                    <div id="miga"><a href="PáginaSesión.html" class="elementosMiga" id="miga1" onmouseover="colorMiga(1)" onmouseout="volverMiga(1)">Página principal</a></div>
                     <div><img id="menuPrincipal" src="IMG/menu.png" onclick="abrirMenu()"></div>
                     <div><img id="imgTitulo" src="IMG/imgTitulo.png"></div>
                     <div id="filtro" onclick="mostrarFiltros()">Filtrar</div>
