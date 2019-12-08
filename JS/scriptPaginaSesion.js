@@ -115,6 +115,17 @@ function cerrarSesion(){
     location.href ="PáginaInicio.html";
 }
 
+function abrirPoliticas(){
+    document.getElementById("cajaPoliticas").style.visibility = "visible";
+    cerrarMenu();
+    document.getElementById("cajaPoliticas").style.zIndex = "3";
+}
+
+function cerrarPoliticas(){
+    document.getElementById("cajaPoliticas").style.zIndex = "1";
+    document.getElementById("cajaPoliticas").style.visibility = "hidden";
+}
+
 function abrirPerfil(){
     var cajaNoticias = document.getElementById("cajaNoticias");
     if(cajaNoticias.style.visibility == "visible"){
