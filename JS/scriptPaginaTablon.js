@@ -418,6 +418,7 @@ function mostrarOpcionesCategoria(numCategoria) {
 
 function archivarCategoria(numCategoria) {
     if(confirm("¿Estás seguro?")) {
+        alert("Has archivado la categoria")
         var categoria = document.getElementById("categoria" + numCategoria);
         padre = categoria.parentNode;
         padre.removeChild(categoria);
