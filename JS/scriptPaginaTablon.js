@@ -237,9 +237,24 @@ function valorar(numero, caja){
 
 function añadirCategoria(){
     var categoria;
-    categoria = prompt("Introduzca el nombre de la categoria", "Mis eventos")
-    if (categoria == "") {
-        alert("El nombre es obligatorio");
+    if(categoria = prompt("Introduzca el nombre de la categoria", "Mis eventos")){
+        if (categoria == "") {
+            alert("El nombre es obligatorio");
+        }
+        else{
+            var cajaGrande = document.getElementById("miTablon");
+            var nuevaCategoria = document.createElement("div");
+            nuevaCategoria.setAttribute("class", "categoria");
+            cajaGrande.appendChild(nuevaCategoria);
+            var nombreCategoria = document.createElement("div");
+            nuevaCategoria.appendChild(nombreCategoria);
+            nombreCategoria.innerHTML = categoria;
+            var opcion = document.createElement("img");
+            opcion.setAttribute("class", "opcionesCaja");
+            opcion.setAttribute("src", "IMG/3Puntos.png");
+            nuevaCategoria.appendChild(opcion);
+            window.alert("Se ha creado correctamente")
+        }
     }
     else{
         var numCategoria = 1
@@ -274,6 +289,7 @@ function añadirCategoria(){
         popUpOpcionesCategoria.appendChild(clear);
         window.alert("Se ha creado correctamente")
     }
+    
 }
 
 function mostrarOpcionesCategoria(numCategoria) {
