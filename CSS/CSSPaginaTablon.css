@@ -211,6 +211,16 @@ form.buscador button:hover {
     float: left;
 }
 
+@keyframes slideInv {
+    0% {margin-left: 100%;}
+    100% {margin-left: 80%;}
+}
+
+@keyframes slideCerrarInv {
+    0% {margin-left: 80%;}
+    100% {margin-left: 100%;}
+}
+
 @keyframes slide {
     0% {margin-left: -50%;}
     100% {margin-left: 0%;}
