@@ -1,3 +1,4 @@
+/*Función para hacer que el menú aparézca desde el margen izquierdo con una animación además de ocultar la lista de filtros si está visible*/
 function abrirMenu() {
     if(localStorage.getItem("Usuario") != null){
         var nombreUsuario = localStorage.getItem("Usuario");
@@ -26,6 +27,7 @@ function abrirMenu() {
     }
 }
 
+/*Función para hacer que el menú se esconda por el margen izquierdo con la animación inversa a la de salida además de ocultar la lista de filtros si está visible*/
 function cerrarMenu() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -47,15 +49,17 @@ function cerrarMenu() {
     menuPrincipal.style.visibility="visible";
 }
 
-
+/*Función que cambia el color del link de la miga de pan por el que se pase el ratón por encima*/
 function colorMiga(numero) {
     document.getElementById("miga" + numero).style.color = "rgb(100, 88, 214)";
 }
 
+/*Función para que el link de la miga de pan que se le ha pasado el ratón por encima recupere su color original cuando el ratón se quite de encima suya*/
 function volverMiga(numero) {
     document.getElementById("miga" + numero).style.color = "white";
 }
 
+/*Función utilizada para mostrar la lista de posibles filtros además de ocultar la lista de filtros si está visible*/
 function mostrarFiltros() {
     var filtro = document.getElementById("filtro");
     if(popUpFiltros.style.visibility == "visible"){
@@ -66,27 +70,34 @@ function mostrarFiltros() {
     }
 }
 
+/*Función utilizada para ocultar la lista de filtros*/
 function cerrarFiltros() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     popUpFiltros.style.visibility="hidden";
 }
 
+/*Función utilizada para cambiar la palabra "Filtro por "Popularidad" para indicar que el filtro activo es el de Popularidad*/
 function ponerPopularidad(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "Popularidad";
     cerrarFiltros();
 }
+
+/*Función utilizada para cambiar la palabra "Filtro por "Antiguedad" para indicar que el filtro activo es el de Antiguedad*/
 function ponerFecha(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "Antigüedad";
     cerrarFiltros();
 }
+
+/*Función utilizada para cambiar la palabra "Filtro por "A-Z" para indicar que el filtro activo es el de Órden alfabético*/
 function ponerAZ(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "A-Z";
     cerrarFiltros();
 }
 
+/*Función para cambiar la visibilidad de las notificaciones del usuario (mostarlas y acultarlas) además de ocultar la lista de filtros si está visible*/
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
     if(popUpNotificaciones.style.visibility == "visible"){
@@ -108,6 +119,7 @@ function mostrarNotificaciones() {
     }
 }
 
+/*Función utilizada para ocultar la lista de filtros*/
 function cerrarSesion(){
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -116,6 +128,7 @@ function cerrarSesion(){
     location.href ="PáginaInicio.html";
 }
 
+/*Función utilizada para abrir la página de las políticas*/
 function abrirPoliticas(){
     document.getElementById("cajaPoliticas").style.visibility = "visible";
     cerrarMenu();

@@ -1,3 +1,4 @@
+/*Función para hacer que el menú aparézca desde el margen izquierdo con una animación además de ocultar la lista de filtros si está visible*/
 function abrirMenu() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(localStorage.getItem("Usuario") != null){
@@ -25,6 +26,7 @@ function abrirMenu() {
     }
 }
 
+/*Función para hacer que el menú se esconda por el margen izquierdo con la animación inversa a la de salida además de ocultar la lista de filtros si está visible*/
 function cerrarMenu() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -46,6 +48,7 @@ function cerrarMenu() {
     menuPrincipal.style.visibility="visible";
 }
 
+/*Función utilizada para mostrar la lista de posibles filtros además de ocultar la lista de filtros si está visible*/
 function mostrarFiltros() {
     var filtro = document.getElementById("popUpFiltros");
     if(filtro.style.visibility == "visible"){
@@ -56,27 +59,34 @@ function mostrarFiltros() {
     }
 }
 
+/*Función utilizada para ocultar la lista de filtros*/
 function cerrarFiltros() {
     var popUpFiltros = document.getElementById("popUpFiltros");
     popUpFiltros.style.visibility="hidden";
 }
 
+/*Función utilizada para cambiar la palabra "Filtro por "Popularidad" para indicar que el filtro activo es el de Popularidad además de ocultar la lista de filtros si está visible*/
 function ponerPopularidad(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "Popularidad";
     cerrarFiltros();
 }
+
+/*Función utilizada para cambiar la palabra "Filtro por "Antiguedad" para indicar que el filtro activo es el de Antiguedad además de ocultar la lista de filtros si está visible*/
 function ponerFecha(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "Antigüedad";
     cerrarFiltros();
 }
+
+/*Función utilizada para cambiar la palabra "Filtro por "A-Z" para indicar que el filtro activo es el de Órden alfabético además de ocultar la lista de filtros si está visible*/
 function ponerAZ(){
     var filtro = document.getElementById("filtro");
     filtro.innerHTML = "A-Z";
     cerrarFiltros();
 }
 
+/*Función para cambiar la visibilidad de las notificaciones del usuario (mostarlas y acultarlas) además de ocultar la lista de filtros si está visible*/
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
     if(popUpNotificaciones.style.visibility == "visible"){
@@ -98,15 +108,16 @@ function mostrarNotificaciones() {
     }
 }
 
-
+/*Función que cambia el color del link de la miga de pan por el que se pase el ratón por encima*/
 function colorMiga(numero) {
     document.getElementById("miga" + numero).style.color = "rgb(100, 88, 214)";
 }
-
+/*Función para que el link de la miga de pan que se le ha pasado el ratón por encima recupere su color original cuando el ratón se quite de encima suya*/
 function volverMiga(numero) {
     document.getElementById("miga" + numero).style.color = "white";
 }
 
+/*Redirige a la página de inicio de sesión además de ocultar la lista de filtros si está visible*/
 function cerrarSesion(){
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
@@ -115,17 +126,20 @@ function cerrarSesion(){
     location.href ="PáginaInicio.html";
 }
 
+/*Función utilizada para abrir la página de las políticas*/
 function abrirPoliticas(){
     document.getElementById("cajaPoliticas").style.visibility = "visible";
     cerrarMenu();
     document.getElementById("cajaPoliticas").style.zIndex = "3";
 }
 
+/*Funcion utilizada para cerrar la pagina de las politicas */
 function cerrarPoliticas(){
     document.getElementById("cajaPoliticas").style.zIndex = "1";
     document.getElementById("cajaPoliticas").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para abrir el perfil del usuario*/
 function abrirPerfil(){
     var cajaNoticias = document.getElementById("cajaNoticias");
     if(cajaNoticias.style.visibility == "visible"){
@@ -164,6 +178,7 @@ function abrirPerfil(){
     document.getElementById("editar").style.visibility = "visible";
 }
 
+/*Funcion utilizada para cerrar el perfil del usuario*/
 function cerrarPerfil(){
     if(document.getElementById("editar").style.visibility == "visible"){
         document.getElementById("editar").style.visibility = "hidden";
@@ -183,11 +198,13 @@ function cerrarPerfil(){
     document.getElementById("cajaPerfil").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para abrir el popup con las opciones para cambiar la foto de perfil*/
 function abrirOpcionesFoto(){
     cerrarPerfil();
     document.getElementById("cambioFoto").style.visibility = "visible";
 }
 
+/*Funcion utilizada para cambiar la foto de perfil*/
 function cambiarFoto(numero){
     document.getElementById("fotoPerfil").src = "IMG/opcionFoto" + numero + ".jpg";
     document.getElementById("fotoPerfil").style.height = "40%";   
@@ -197,6 +214,7 @@ function cambiarFoto(numero){
     abrirPerfil();
 }
 
+/*Funcion utilizada para poder cerrar el popup de cambio de foto de perfil si no se quiere cambiar*/
 function cerrarOpciones(){
     document.getElementById("editar").style.visibility = "visible";
     document.getElementById("tickVerde").style.visibility = "hidden";
@@ -207,6 +225,7 @@ function cerrarOpciones(){
     document.getElementById("cambioFoto").style.visibility = "hidden";
 }
 
+/*Funcion utilizada para poder cambiar el nombre de usuario*/
 function editarNombre(){
     document.getElementById("editar").style.visibility = "hidden";
     document.getElementById("tickVerde").style.visibility = "visible";
@@ -218,6 +237,7 @@ function editarNombre(){
     document.getElementById("textoCambiado").style.visibility = "visible";
 }
 
+/*Funcion utilizada para aceptar el cambio a la hora de cambiar el nombre de usuario*/
 function aceptarNombre(){
     var aux = document.getElementById("textoCambiado").textContent;
     document.getElementById("textoPerfil").textContent = aux;
@@ -229,6 +249,7 @@ function aceptarNombre(){
     localStorage.setItem("Usuario", aux);
 }
 
+/*Funcion utilizada para rechazar el cambio a la hora de cambiar el nombre de usuario*/
 function rechazarNombre(){
     document.getElementById("textoPerfil").style.visibility = "visible";
     document.getElementById("textoCambiado").style.visibility = "hidden";
@@ -237,10 +258,12 @@ function rechazarNombre(){
     document.getElementById("tickRojo").style.visibility = "hidden";
 }
 
+/*Redirige a la pagina del tablon en la seccion "Mi tablon de eventos" del menu desplegable*/
 function abrirTablon(){
     location.href ="paginaTablon.html";
 }
 
+/*Funcion utilizada para que aparezcan las secciones de noticias*/
 function abrirNoticias(){
     var cajaNoticias = document.getElementById("cajaNoticias");
     if(cajaNoticias.style.visibility == "visible"){
@@ -253,28 +276,34 @@ function abrirNoticias(){
     }
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function Esportmaniacos(){
     location.href = "https://www.esportmaniacos.com/";
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function LVP(){
     location.href = "https://www.lvp.es/";
 }
 
+/*Redirige a otra pagina en la seccion de noticias del menu desplegable*/
 function ESL(){
     location.href = "https://play.eslgaming.com/spain";
 }
 
+/*Funcion utilizada para que desaparezcan las secciones de noticias*/
 function cerrarNoticias(){
     var cerrarNoticias = document.getElementById("cajaNoticias");
     document.getElementById("colorNoticia").style.borderColor = "";
     cerrarNoticias.style.visibility="hidden";
 }
 
+/*Redirige a otra pagina en la seccion "Campeonatos" del menu desplegable*/
 function verCampeonatos(){
     location.href = "https://esports.as.com/otros/Agenda-esports-torneos-competiciones-hoy_0_1102989697.html";
 }
 
+/*Funcion utilizada para abrir el popup de una actividad*/
 var variable;
 function openpopup(a) {
     var i = 1;
@@ -285,12 +314,16 @@ function openpopup(a) {
     variable = document.getElementById("popup"+a);
     variable.classList.add("show");
 }
+
+/*Funcion utilizada para cerrar el popup de una actividad*/
 function closepopup(a){
     variable = document.getElementById("popup"+a);
     if(variable!=null){
         variable.classList.remove("show");
     }
 }
+
+/*Funcion utilizada para eliminar una actividad*/
 function closebox(a){
     if (window.confirm("¿Seguro que quieres borrar la caja?")) {
         variable = document.getElementById("caja"+a);
@@ -301,6 +334,7 @@ function closebox(a){
     } else {}
 }
 
+/*Funcion utilizada para que al pulsar enviar coja al usuario y coloque el mensaje en el chat enviado por ese usuario*/
 function cogerTexto(numero){
     var usuario = localStorage.getItem("Usuario");
     if (usuario != null){
@@ -317,7 +351,7 @@ function cogerTexto(numero){
     var contenedor = document.getElementById("chat" + numero);
     contenedor.insertBefore( texto, document.getElementById("barra" + numero));
   }
-
+  /*Funcion utilizada para que al pasar el raton por encima de una estrella no marcada se rellene junto con las anteriores*/
   function cambiarEstrella(numero, caja){
     if(document.getElementById("estrella" + numero + caja) != null){
         while (numero != 0){
@@ -327,6 +361,7 @@ function cogerTexto(numero){
     }
 }
 
+/*Funcion utilizada para que al quitar el raton de una estrella no marcada se vacie tanto ella como las anteriores no marcadas*/
 function volverEstrella(numero, caja){
     if(document.getElementById("estrella" + numero + caja) != null){
         while(numero != 0){
@@ -336,6 +371,7 @@ function volverEstrella(numero, caja){
     }
 }
 
+/*Funcion utilizada para que al pulsar sobre una estrella se marquen tanto ella como las anteriores*/
 function valorar(numero, caja){
 
     if (document.getElementById("estrellaAcabada" + numero + caja) != null){
