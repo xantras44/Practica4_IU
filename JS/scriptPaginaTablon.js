@@ -242,52 +242,40 @@ function añadirCategoria(){
             alert("El nombre es obligatorio");
         }
         else{
+            var numCategoria = 1
+            while(document.getElementById("categoria" + numCategoria) != null){
+                numCategoria = numCategoria + 1;
+            }
             var cajaGrande = document.getElementById("miTablon");
             var nuevaCategoria = document.createElement("div");
             nuevaCategoria.setAttribute("class", "categoria");
+            nuevaCategoria.setAttribute("id", "categoria" + numCategoria);
             cajaGrande.appendChild(nuevaCategoria);
             var nombreCategoria = document.createElement("div");
-            nuevaCategoria.appendChild(nombreCategoria);
             nombreCategoria.innerHTML = categoria;
+            nuevaCategoria.appendChild(nombreCategoria);
             var opcion = document.createElement("img");
             opcion.setAttribute("class", "opcionesCaja");
             opcion.setAttribute("src", "IMG/3Puntos.png");
+            opcion.setAttribute("onclick", "mostrarOpcionesCategoria('" + numCategoria + "')")
             nuevaCategoria.appendChild(opcion);
+            var popUpOpcionesCategoria = document.createElement("div");
+            popUpOpcionesCategoria.setAttribute("id", "popUpOpcionesCategoria" + numCategoria);
+            popUpOpcionesCategoria.setAttribute("class", "popUpOpcionesCategoria");
+            popUpOpcionesCategoria.setAttribute("onclick", "mostrarOpcionesCategoria('" + numCategoria + "')")
+            nuevaCategoria.appendChild(popUpOpcionesCategoria);
+            var opcionCategoria = document.createElement("div");
+            opcionCategoria.setAttribute("class", "opcionCategoria");
+            opcionCategoria.setAttribute("onclick", "archivarCategoria('" + numCategoria + "')")
+            opcionCategoria.innerHTML = "Archivar";
+            popUpOpcionesCategoria.appendChild(opcionCategoria);
+            var clear = document.createElement("div");
+            clear.setAttribute("class", "clear");
+            popUpOpcionesCategoria.appendChild(clear);
             window.alert("Se ha creado correctamente")
         }
     }
     else{
-        var numCategoria = 1
-        while(document.getElementById("categoria" + numCategoria) != null){
-            numCategoria = numCategoria + 1;
-        }
-        var cajaGrande = document.getElementById("miTablon");
-        var nuevaCategoria = document.createElement("div");
-        nuevaCategoria.setAttribute("class", "categoria");
-        nuevaCategoria.setAttribute("id", "categoria" + numCategoria);
-        cajaGrande.appendChild(nuevaCategoria);
-        var nombreCategoria = document.createElement("div");
-        nombreCategoria.innerHTML = categoria;
-        nuevaCategoria.appendChild(nombreCategoria);
-        var opcion = document.createElement("img");
-        opcion.setAttribute("class", "opcionesCaja");
-        opcion.setAttribute("src", "IMG/3Puntos.png");
-        opcion.setAttribute("onclick", "mostrarOpcionesCategoria('" + numCategoria + "')")
-        nuevaCategoria.appendChild(opcion);
-        var popUpOpcionesCategoria = document.createElement("div");
-        popUpOpcionesCategoria.setAttribute("id", "popUpOpcionesCategoria" + numCategoria);
-        popUpOpcionesCategoria.setAttribute("class", "popUpOpcionesCategoria");
-        popUpOpcionesCategoria.setAttribute("onclick", "mostrarOpcionesCategoria('" + numCategoria + "')")
-        nuevaCategoria.appendChild(popUpOpcionesCategoria);
-        var opcionCategoria = document.createElement("div");
-        opcionCategoria.setAttribute("class", "opcionCategoria");
-        opcionCategoria.setAttribute("onclick", "archivarCategoria('" + numCategoria + "')")
-        opcionCategoria.innerHTML = "Archivar";
-        popUpOpcionesCategoria.appendChild(opcionCategoria);
-        var clear = document.createElement("div");
-        clear.setAttribute("class", "clear");
-        popUpOpcionesCategoria.appendChild(clear);
-        window.alert("Se ha creado correctamente")
     }
     
 }
