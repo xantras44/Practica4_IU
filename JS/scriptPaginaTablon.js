@@ -421,7 +421,7 @@ function archivarCategoria(numCategoria) {
 }
 
 function añadirActividad(numCategoria) {
-    var titulo = prompt("Introduzca la actividad", "Multijugador GTA V");
+    var titulo = prompt("Introduzca el título de la actividad", "Multijugador GTA V");
     var foto = prompt("Introduzca la foto", "https://s1.gaming-cdn.com/images/products/186/271x377/grand-theft-auto-v-cover.jpg");
     var plazasLibres = prompt("Introduzca las plazas disponibles para actividad", "22");
     var premio = prompt("Introduzca el premio para el ganador", "200€");
@@ -430,7 +430,7 @@ function añadirActividad(numCategoria) {
     var hastag2 = prompt("Introduzca otro hastag", "#LOL");
     var juego = prompt("Introduzca el juego de la nueva actividad", "Desconocido");
     if (titulo == "" || titulo == null || plazasLibres == "" || plazasLibres == null) {
-        alert("El titulo y la descripción es obligatorio");
+        alert("El titulo y las plazas libres es obligatorio");
     }
     else {
         var cajaGrande = document.getElementById("categoria" + numCategoria);
