@@ -654,6 +654,10 @@ footer a img:hover{
     cursor: pointer;
 }
 
+.titulo{
+    color: teal;
+}
+
 .cierre{
     width: 3%;
     height: 6%;

@@ -692,6 +692,10 @@ form.buscador button:hover {
     cursor: pointer;
 }
 
+.titulo{
+    color: teal;
+}
+
 .cierre{
     width: 5%;
     height: auto;
