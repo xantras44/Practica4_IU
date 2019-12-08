@@ -1,5 +1,4 @@
 function abrirMenu() {
-    var popUpFiltros = document.getElementById("popUpFiltros");
     if(localStorage.getItem("Usuario") != null){
         var nombreUsuario = localStorage.getItem("Usuario");
         document.getElementById("nombrePerfil").textContent = nombreUsuario;
@@ -7,6 +6,7 @@ function abrirMenu() {
     else{
         document.getElementById("nombrePerfil").textContent = "Mi perfil";   
     }
+    var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
         cerrarFiltros();
     }

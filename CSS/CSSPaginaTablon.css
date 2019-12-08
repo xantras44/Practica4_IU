@@ -247,6 +247,7 @@ form.buscador button:hover {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
     visibility: hidden;
+    z-index: 1;
 }
 
 #cajaMenu2 {

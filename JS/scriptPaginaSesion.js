@@ -79,18 +79,18 @@ function ponerAZ(){
 
 function mostrarNotificaciones() {
     var popUpNotificaciones = document.getElementById("popUpNotificaciones");
-    if(popUpNotificaciones.style.visibility == "hidden"){
+    if(popUpNotificaciones.style.visibility == "visible"){
+        popUpNotificaciones.style.visibility="hidden";
+        popUpNotificaciones.style.animation="slideCerrarInv";
+        popUpNotificaciones.style.animationDuration="0.5s";
+    }
+    else{
         popUpNotificaciones.style.visibility="visible";
         popUpNotificaciones.style.animation="slideInv";
         popUpNotificaciones.style.animationDuration="0.5s";
         imagen = document.getElementById("numeroNotificaciones");
         padre = imagen.parentNode;
         padre.removeChild(imagen);
-    }
-    else{
-        popUpNotificaciones.style.visibility="hidden";
-        popUpNotificaciones.style.animation="slideCerrarInv";
-        popUpNotificaciones.style.animationDuration="0.5s";
     }
     var popUpFiltros = document.getElementById("popUpFiltros");
     if(popUpFiltros.style.visibility == "visible"){
