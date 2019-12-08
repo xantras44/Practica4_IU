@@ -425,10 +425,10 @@ function añadirActividad(numCategoria) {
     var foto = prompt("Introduzca la foto", "https://s1.gaming-cdn.com/images/products/186/271x377/grand-theft-auto-v-cover.jpg");
     var plazasLibres = prompt("Introduzca las plazas disponibles para actividad", "22");
     var premio = prompt("Introduzca el premio para el ganador", "200€");
-    var icono = prompt("Introduzca el icono del juego", "IMG/codLogo.png");
-    var hastag1 = prompt("Introduzca un hastag", "#MD");
-    var hastag2 = prompt("Introduzca otro hastag", "#LOL");
-    var juego = prompt("Introduzca el juego de la nueva actividad", "Desconocido");
+    var icono = prompt("Introduzca el icono del juego", "IMG/gtaLogo.png");
+    var hastag1 = prompt("Introduzca un hastag", "#GTA V");
+    var hastag2 = prompt("Introduzca otro hastag", "#GTA Online");
+    var juego = prompt("Introduzca el juego de la nueva actividad", "GTA V");
     if (titulo == "" || titulo == null || plazasLibres == "" || plazasLibres == null) {
         alert("El titulo y las plazas libres es obligatorio");
     }
